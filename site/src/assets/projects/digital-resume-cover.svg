@@ -1,0 +1,602 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="100%" height="100%">
+  <!--
+    ============================================================================
+    PROFESSIONAL ACCOUNTANT PORTFOLIO — GITHUB COVER
+    Design System: Fintech / SaaS Premium Minimalism
+    Version: 2.0 — Refined & Polished
+    ============================================================================
+  -->
+
+  <!-- ============================== DEFINITIONS ============================= -->
+  <defs>
+    <!-- ── GRADIENTS ──────────────────────────────────────────────────────── -->
+    <!-- Background: subtle warm-cool blend -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC" />
+      <stop offset="35%" stop-color="#F1F5F9" />
+      <stop offset="70%" stop-color="#EEF2FF" />
+      <stop offset="100%" stop-color="#F5F3FF" />
+    </linearGradient>
+
+    <!-- Primary Blue: deeper, more professional -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+
+    <!-- Secondary Indigo -->
+    <linearGradient id="secondaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#4F46E5" />
+    </linearGradient>
+
+    <!-- Accent Violet: toned down -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#6D28D9" />
+    </linearGradient>
+
+    <!-- Success Emerald -->
+    <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <!-- Warm Amber (coins / highlights) -->
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <!-- Glass Card Fill -->
+    <linearGradient id="glassFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.92" />
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.78" />
+      <stop offset="100%" stop-color="#F8FAFC" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Glass Reflection (diagonal) -->
+    <linearGradient id="glassReflect" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55" />
+      <stop offset="25%" stop-color="#FFFFFF" stop-opacity="0.08" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.0" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.12" />
+    </linearGradient>
+
+    <!-- Sidebar fill -->
+    <linearGradient id="sidebarFill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#F1F5F9" />
+    </linearGradient>
+
+    <!-- ── SHADOW FILTERS (Layered Depth System) ──────────────────────────── -->
+    <!-- Card Shadow: tight + medium + ambient -->
+    <filter id="cardShadow" x="-8%" y="-8%" width="116%" height="120%">
+      <!-- Tight edge -->
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#0F172A" flood-opacity="0.04" />
+      <!-- Mid depth -->
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.06" />
+      <!-- Ambient -->
+      <feDropShadow dx="0" dy="16" stdDeviation="32" flood-color="#0F172A" flood-opacity="0.04" />
+    </filter>
+
+    <!-- Elevated Element Shadow (floating cards) -->
+    <filter id="elevatedShadow" x="-12%" y="-12%" width="124%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.05" />
+      <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="#0F172A" flood-opacity="0.08" />
+      <feDropShadow dx="0" dy="24" stdDeviation="48" flood-color="#0F172A" flood-opacity="0.04" />
+    </filter>
+
+    <!-- Subtle Shadow for small elements -->
+    <filter id="subtleShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.06" />
+    </filter>
+
+    <!-- Badge Shadow -->
+    <filter id="badgeShadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.05" />
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#0F172A" flood-opacity="0.03" />
+    </filter>
+
+    <!-- ── AMBIENT GLOW ────────────────────────────────────────────────────── -->
+    <filter id="glowSoft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="55" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glowSubtle" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="28" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- ── PATTERNS ────────────────────────────────────────────────────────── -->
+    <!-- Subtle dot grid -->
+    <pattern id="dotGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="16" cy="16" r="0.8" fill="#94A3B8" fill-opacity="0.12" />
+    </pattern>
+
+    <!-- Subtle geometric motif (refined) -->
+    <pattern id="geoPattern" x="0" y="0" width="140" height="140" patternUnits="userSpaceOnUse">
+      <path d="M 70 8 L 132 70 L 70 132 L 8 70 Z" fill="none" stroke="#2563EB" stroke-opacity="0.03" stroke-width="1.5" />
+      <circle cx="70" cy="70" r="42" fill="none" stroke="#7C3AED" stroke-opacity="0.02" stroke-width="1" />
+    </pattern>
+
+    <!-- ── CLIP PATHS ──────────────────────────────────────────────────────── -->
+    <!-- Dashboard sidebar clipping -->
+    <clipPath id="sidebarClip">
+      <path d="M 0 0 L 90 0 L 90 530 L 0 530 Q 0 530 0 506 L 0 24 Q 0 0 24 0 Z" />
+    </clipPath>
+
+    <!-- ── REUSABLE ICONS ──────────────────────────────────────────────────── -->
+    <!-- Checkmark (used in feature list) -->
+    <g id="checkIcon">
+      <circle cx="13" cy="13" r="13" fill="#ECFDF5" />
+      <circle cx="13" cy="13" r="12" fill="none" stroke="#A7F3D0" stroke-width="1.5" />
+      <path d="M 7.5 13 L 11 16.5 L 18.5 9" stroke="#059669" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+  </defs>
+
+  <!-- ========================== BACKGROUND LAYER =========================== -->
+  <g id="background">
+    <!-- Base fill -->
+    <rect width="1600" height="900" fill="url(#bgGrad)" />
+    <!-- Dot grid overlay -->
+    <rect width="1600" height="900" fill="url(#dotGrid)" />
+    <!-- Geometric pattern overlay -->
+    <rect width="1600" height="900" fill="url(#geoPattern)" />
+
+    <!-- Ambient glow orbs (subdued) -->
+    <circle cx="1350" cy="280" r="320" fill="#3B82F6" opacity="0.06" filter="url(#glowSoft)" />
+    <circle cx="250" cy="680" r="260" fill="#8B5CF6" opacity="0.05" filter="url(#glowSoft)" />
+    <circle cx="900" cy="780" r="220" fill="#10B981" opacity="0.04" filter="url(#glowSoft)" />
+    <circle cx="1480" cy="120" r="160" fill="#F59E0B" opacity="0.04" filter="url(#glowSoft)" />
+  </g>
+
+  <!-- ===================== DECORATIVE CONNECTING LINES ===================== -->
+  <g id="connecting-lines" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3 5" fill="none" opacity="0.5">
+    <path d="M 890 160 Q 860 120 810 130" />
+    <path d="M 1460 160 Q 1500 130 1530 140" />
+    <path d="M 800 660 Q 850 570 920 560" />
+    <path d="M 1480 660 Q 1320 580 1270 530" />
+  </g>
+
+  <!-- ====================== FLOATING ELEMENTS ============================== -->
+  <!-- Refined: smaller, more minimal, enterprise-style -->
+  <g id="floating-elements">
+    <!-- 1. Minimal Calculator -->
+    <g id="calculator" transform="translate(740, 68)">
+      <rect x="0" y="0" width="110" height="150" rx="14" fill="#FFFFFF" filter="url(#elevatedShadow)" />
+      <rect x="0" y="0" width="110" height="150" rx="14" fill="url(#glassFill)" />
+      <rect x="0" y="0" width="110" height="150" rx="14" fill="url(#glassReflect)" />
+      <rect x="0" y="0" width="110" height="150" rx="14" fill="none" stroke="#E2E8F0" stroke-width="0.8" />
+      <!-- Display -->
+      <rect x="10" y="14" width="90" height="22" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.5" />
+      <text x="18" y="29" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#334155">$12,450</text>
+      <!-- Key rows -->
+      <g fill="#F1F5F9" stroke="#E2E8F0" stroke-width="0.5">
+        <rect x="10" y="46" width="19" height="19" rx="5" />
+        <rect x="33" y="46" width="19" height="19" rx="5" />
+        <rect x="56" y="46" width="19" height="19" rx="5" />
+        <rect x="79" y="46" width="19" height="19" rx="5" fill="url(#primaryGrad)" stroke="none" />
+        <rect x="10" y="71" width="19" height="19" rx="5" />
+        <rect x="33" y="71" width="19" height="19" rx="5" />
+        <rect x="56" y="71" width="19" height="19" rx="5" />
+        <rect x="79" y="71" width="19" height="19" rx="5" />
+        <rect x="10" y="96" width="19" height="19" rx="5" />
+        <rect x="33" y="96" width="19" height="19" rx="5" />
+        <rect x="56" y="96" width="19" height="19" rx="5" />
+        <rect x="79" y="96" width="19" height="19" rx="5" />
+        <rect x="10" y="121" width="42" height="19" rx="5" />
+        <rect x="56" y="121" width="19" height="19" rx="5" />
+        <rect x="79" y="121" width="19" height="19" rx="5" fill="url(#accentGrad)" stroke="none" />
+      </g>
+      <text x="89" y="135" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">+</text>
+    </g>
+
+    <!-- 2. Minimal Audit Clipboard -->
+    <g id="clipboard" transform="translate(1420, 60)">
+      <rect x="0" y="0" width="110" height="140" rx="12" fill="#FFFFFF" filter="url(#elevatedShadow)" />
+      <rect x="0" y="0" width="110" height="140" rx="12" fill="url(#glassFill)" />
+      <rect x="0" y="0" width="110" height="140" rx="12" fill="url(#glassReflect)" />
+      <rect x="0" y="0" width="110" height="140" rx="12" fill="none" stroke="#E2E8F0" stroke-width="0.8" />
+      <!-- Clip -->
+      <rect x="38" y="-6" width="34" height="18" rx="5" fill="#64748B" />
+      <rect x="42" y="6" width="26" height="5" rx="2.5" fill="#475569" />
+      <!-- Lines -->
+      <line x1="14" y1="28" x2="96" y2="28" stroke="#E2E8F0" stroke-width="3" stroke-linecap="round" />
+      <line x1="14" y1="42" x2="78" y2="42" stroke="#E2E8F0" stroke-width="3" stroke-linecap="round" />
+      <line x1="14" y1="56" x2="88" y2="56" stroke="#E2E8F0" stroke-width="3" stroke-linecap="round" />
+      <line x1="14" y1="70" x2="68" y2="70" stroke="#E2E8F0" stroke-width="3" stroke-linecap="round" />
+      <line x1="14" y1="84" x2="92" y2="84" stroke="#E2E8F0" stroke-width="3" stroke-linecap="round" />
+      <line x1="14" y1="98" x2="80" y2="98" stroke="#E2E8F0" stroke-width="3" stroke-linecap="round" />
+      <!-- Small checkmarks -->
+      <circle cx="96" cy="32" r="7" fill="#ECFDF5" />
+      <path d="M 92.5 32 L 95 34.5 L 99.5 29" stroke="#059669" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="96" cy="46" r="7" fill="#ECFDF5" />
+      <path d="M 92.5 46 L 95 48.5 L 99.5 43" stroke="#059669" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+
+    <!-- 3. Ledger / Balance Sheet Card -->
+    <g id="ledger" transform="translate(730, 610)">
+      <rect x="0" y="0" width="120" height="85" rx="10" fill="#FFFFFF" filter="url(#subtleShadow)" transform="rotate(-3)" />
+      <rect x="0" y="0" width="120" height="85" rx="10" fill="none" stroke="#E2E8F0" stroke-width="0.7" transform="rotate(-3)" />
+      <!-- Grid lines -->
+      <line x1="14" y1="18" x2="106" y2="18" stroke="#F1F5F9" stroke-width="2.5" stroke-linecap="round" transform="rotate(-3 60 50)" />
+      <line x1="14" y1="30" x2="88" y2="30" stroke="#F1F5F9" stroke-width="2.5" stroke-linecap="round" transform="rotate(-3 60 50)" />
+      <line x1="14" y1="42" x2="98" y2="42" stroke="#F1F5F9" stroke-width="2.5" stroke-linecap="round" transform="rotate(-3 60 50)" />
+      <line x1="14" y1="54" x2="78" y2="54" stroke="#F1F5F9" stroke-width="2.5" stroke-linecap="round" transform="rotate(-3 60 50)" />
+      <!-- Highlight row -->
+      <line x1="14" y1="66" x2="106" y2="66" stroke="url(#primaryGrad)" stroke-width="2.8" stroke-linecap="round" transform="rotate(-3 60 50)" />
+      <text x="18" y="74" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#1D4ED8" transform="rotate(-3 60 50)">BALANCE</text>
+    </g>
+
+    <!-- 4. Minimal Coin Stack -->
+    <g id="coins" transform="translate(1470, 670)">
+      <!-- Coin 3 (top) -->
+      <ellipse cx="0" cy="0" rx="18" ry="7" fill="#D97706" />
+      <rect x="-18" y="-8" width="36" height="8" fill="url(#amberGrad)" />
+      <ellipse cx="0" cy="-8" rx="18" ry="7" fill="#FEF3C7" />
+      <text x="0" y="-4" font-family="system-ui, sans-serif" font-size="8" font-weight="800" fill="#92400E" text-anchor="middle">$</text>
+      <!-- Coin 2 -->
+      <ellipse cx="0" cy="12" rx="18" ry="7" fill="#D97706" />
+      <rect x="-18" y="4" width="36" height="8" fill="url(#amberGrad)" />
+      <ellipse cx="0" cy="4" rx="18" ry="7" fill="#FEF3C7" />
+      <text x="0" y="8" font-family="system-ui, sans-serif" font-size="8" font-weight="800" fill="#92400E" text-anchor="middle">$</text>
+      <!-- Coin 1 (bottom) -->
+      <ellipse cx="0" cy="24" rx="18" ry="7" fill="#D97706" />
+      <rect x="-18" y="16" width="36" height="8" fill="url(#amberGrad)" />
+      <ellipse cx="0" cy="16" rx="18" ry="7" fill="#FEF3C7" />
+      <text x="0" y="20" font-family="system-ui, sans-serif" font-size="8" font-weight="800" fill="#92400E" text-anchor="middle">$</text>
+    </g>
+
+    <!-- 5. Growth Sparkline -->
+    <g id="growth-spark" transform="translate(640, 680)">
+      <rect x="0" y="0" width="80" height="50" rx="8" fill="#FFFFFF" filter="url(#subtleShadow)" />
+      <rect x="0" y="0" width="80" height="50" rx="8" fill="none" stroke="#E2E8F0" stroke-width="0.6" />
+      <path d="M 10 38 L 22 32 L 34 36 L 46 18 L 58 22 L 70 8" stroke="url(#successGrad)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="70" cy="8" r="3" fill="#059669" />
+      <text x="70" y="6" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#059669" text-anchor="start">+12%</text>
+    </g>
+  </g>
+
+  <!-- ====================== LEFT CONTENT CARD ============================= -->
+  <g id="left-card">
+    <!-- Glass card base -->
+    <rect x="52" y="110" width="610" height="660" rx="26" fill="#FFFFFF" fill-opacity="0.88" filter="url(#cardShadow)" />
+    <rect x="52" y="110" width="610" height="660" rx="26" fill="url(#glassFill)" />
+    <rect x="52" y="110" width="610" height="660" rx="26" fill="url(#glassReflect)" />
+    <rect x="52" y="110" width="610" height="660" rx="26" fill="none" stroke="#E2E8F0" stroke-width="0.8" />
+
+    <!-- Accent vertical bar (left edge) -->
+    <rect x="52" y="110" width="5" height="660" rx="2.5" fill="url(#primaryGrad)" opacity="0.7" />
+
+    <!-- ── Title Block ────────────────────────────────────────────────────── -->
+    <g transform="translate(110, 180)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="800" font-size="50" fill="#0F172A" letter-spacing="-1.2">
+        Professional
+      </text>
+      <text x="0" y="56" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="800" font-size="50" fill="url(#primaryGrad)" letter-spacing="-1.2">
+        Accountant Portfolio
+      </text>
+
+      <!-- Subtle separator -->
+      <line x1="0" y1="78" x2="60" y2="78" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" />
+
+      <!-- Subtitle -->
+      <text x="0" y="108" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="400" font-size="18" fill="#64748B" letter-spacing="0.1">
+        A modern bilingual accountant portfolio website
+      </text>
+      <text x="0" y="134" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="400" font-size="18" fill="#64748B" letter-spacing="0.1">
+        built with HTML, Tailwind CSS &amp; JavaScript.
+      </text>
+    </g>
+
+    <!-- ── Feature List ────────────────────────────────────────────────────── -->
+    <g transform="translate(110, 400)">
+      <!-- Feature Row 1 -->
+      <g transform="translate(0, 0)">
+        <use href="#checkIcon" x="0" y="0" />
+        <text x="42" y="17" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="600" font-size="17" fill="#334155">Responsive Design &amp; Mobile-First Approach</text>
+      </g>
+      <!-- Feature Row 2 -->
+      <g transform="translate(0, 46)">
+        <use href="#checkIcon" x="0" y="0" />
+        <text x="42" y="17" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="600" font-size="17" fill="#334155">Arabic &amp; English Bilingual Support</text>
+      </g>
+      <!-- Feature Row 3 -->
+      <g transform="translate(0, 92)">
+        <use href="#checkIcon" x="0" y="0" />
+        <text x="42" y="17" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="600" font-size="17" fill="#334155">Animated Skill Bars &amp; Interactive Timeline</text>
+      </g>
+      <!-- Feature Row 4 -->
+      <g transform="translate(0, 138)">
+        <use href="#checkIcon" x="0" y="0" />
+        <text x="42" y="17" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="600" font-size="17" fill="#334155">Professional Services &amp; Printable CV</text>
+      </g>
+      <!-- Feature Row 5 -->
+      <g transform="translate(0, 184)">
+        <use href="#checkIcon" x="0" y="0" />
+        <text x="42" y="17" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="600" font-size="17" fill="#334155">Smooth Animations &amp; Premium UI/UX</text>
+      </g>
+      <!-- Feature Row 6 -->
+      <g transform="translate(0, 230)">
+        <use href="#checkIcon" x="0" y="0" />
+        <text x="42" y="17" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="600" font-size="17" fill="#334155">Modern Glassmorphism &amp; Dashboard Style</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ====================== MAIN DASHBOARD ================================= -->
+  <g id="dashboard" transform="translate(710, 190)">
+    <!-- Dashboard outer card -->
+    <rect x="0" y="0" width="820" height="540" rx="22" fill="#FFFFFF" filter="url(#cardShadow)" />
+    <rect x="0" y="0" width="820" height="540" rx="22" fill="url(#glassFill)" />
+    <rect x="0" y="0" width="820" height="540" rx="22" fill="url(#glassReflect)" />
+    <rect x="0" y="0" width="820" height="540" rx="22" fill="none" stroke="#E2E8F0" stroke-width="0.7" />
+
+    <!-- ── Sidebar ────────────────────────────────────────────────────────── -->
+    <g clip-path="url(#sidebarClip)">
+      <rect x="0" y="0" width="88" height="540" fill="url(#sidebarFill)" />
+    </g>
+    <!-- Sidebar divider line -->
+    <line x1="88" y1="18" x2="88" y2="522" stroke="#E2E8F0" stroke-width="1" />
+
+    <!-- Sidebar menu items -->
+    <g>
+      <!-- Active indicator -->
+      <rect x="0" y="22" width="3" height="24" rx="1.5" fill="url(#primaryGrad)" />
+      <circle cx="44" cy="34" r="6" fill="url(#primaryGrad)" />
+      <!-- Inactive items -->
+      <rect x="22" y="64" width="44" height="4" rx="2" fill="#CBD5E1" />
+      <rect x="22" y="78" width="36" height="4" rx="2" fill="#CBD5E1" />
+      <rect x="22" y="92" width="40" height="4" rx="2" fill="#CBD5E1" />
+      <!-- Separator -->
+      <line x1="22" y1="118" x2="66" y2="118" stroke="#E2E8F0" stroke-width="1" />
+      <rect x="22" y="138" width="44" height="4" rx="2" fill="#CBD5E1" />
+      <rect x="22" y="152" width="34" height="4" rx="2" fill="#CBD5E1" />
+      <rect x="22" y="166" width="42" height="4" rx="2" fill="#CBD5E1" />
+      <!-- User avatar area -->
+      <circle cx="44" cy="500" r="16" fill="#E2E8F0" />
+      <circle cx="44" cy="500" r="12" fill="#CBD5E1" />
+    </g>
+
+    <!-- ── Header ──────────────────────────────────────────────────────────── -->
+    <g transform="translate(104, 0)">
+      <rect x="0" y="0" width="716" height="56" fill="#FFFFFF" fill-opacity="0" />
+      <text x="0" y="36" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="700" font-size="17" fill="#0F172A">Financial Dashboard</text>
+
+      <!-- Header actions -->
+      <g transform="translate(580, 14)">
+        <!-- Notification bell -->
+        <circle cx="16" cy="14" r="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+        <path d="M 12 18 C 12 22 20 22 20 18" fill="none" stroke="#64748B" stroke-width="1.5" stroke-linecap="round" />
+        <line x1="16" y1="8" x2="16" y2="12" stroke="#64748B" stroke-width="1.5" stroke-linecap="round" />
+        <!-- Small red dot -->
+        <circle cx="22" cy="8" r="3" fill="#EF4444" />
+        <!-- Profile circle -->
+        <circle cx="56" cy="14" r="12" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1" />
+        <circle cx="56" cy="14" r="7" fill="#CBD5E1" />
+        <!-- Action button -->
+        <rect x="86" y="2" width="44" height="24" rx="12" fill="url(#primaryGrad)" />
+        <circle cx="108" cy="14" r="5" fill="#FFFFFF" />
+        <path d="M 111 14 L 117 10 L 117 18 Z" fill="#FFFFFF" />
+      </g>
+    </g>
+
+    <!-- Header bottom border -->
+    <line x1="104" y1="56" x2="820" y2="56" stroke="#F1F5F9" stroke-width="1.5" />
+
+    <!-- ── KPI Widgets Row ─────────────────────────────────────────────────── -->
+    <!-- Widget 1: Total Revenue -->
+    <g transform="translate(112, 78)">
+      <rect x="0" y="0" width="212" height="106" rx="12" fill="#FFFFFF" filter="url(#subtleShadow)" stroke="#F1F5F9" stroke-width="1" />
+      <text x="18" y="28" font-family="system-ui, sans-serif" font-weight="600" font-size="12" fill="#94A3B8" letter-spacing="0.3">TOTAL REVENUE</text>
+      <text x="18" y="60" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="800" font-size="28" fill="#0F172A" letter-spacing="-0.5">$48,300</text>
+      <!-- Sparkline -->
+      <path d="M 130 68 L 142 54 L 154 62 L 166 42 L 178 50 L 190 30" stroke="url(#successGrad)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+      <polygon points="190,30 195,38 185,38" fill="#059669" />
+      <text x="140" y="94" font-family="system-ui, sans-serif" font-weight="600" font-size="11" fill="#059669">↑ 12.5% vs last month</text>
+    </g>
+
+    <!-- Widget 2: Expenses -->
+    <g transform="translate(340, 78)">
+      <rect x="0" y="0" width="212" height="106" rx="12" fill="#FFFFFF" filter="url(#subtleShadow)" stroke="#F1F5F9" stroke-width="1" />
+      <text x="18" y="28" font-family="system-ui, sans-serif" font-weight="600" font-size="12" fill="#94A3B8" letter-spacing="0.3">EXPENSES</text>
+      <text x="18" y="60" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="800" font-size="28" fill="#0F172A" letter-spacing="-0.5">$22,800</text>
+      <!-- Sparkline (downward) -->
+      <path d="M 130 42 L 142 56 L 154 48 L 166 64 L 178 56 L 190 72" stroke="#EF4444" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+      <polygon points="190,72 185,64 195,64" fill="#EF4444" />
+      <text x="140" y="94" font-family="system-ui, sans-serif" font-weight="600" font-size="11" fill="#EF4444">↓ 3.2% vs last month</text>
+    </g>
+
+    <!-- Widget 3: Net Profit -->
+    <g transform="translate(568, 78)">
+      <rect x="0" y="0" width="228" height="106" rx="12" fill="#FFFFFF" filter="url(#subtleShadow)" stroke="#F1F5F9" stroke-width="1" />
+      <text x="18" y="28" font-family="system-ui, sans-serif" font-weight="600" font-size="12" fill="#94A3B8" letter-spacing="0.3">NET PROFIT</text>
+      <text x="18" y="60" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="800" font-size="28" fill="#0F172A" letter-spacing="-0.5">$25,500</text>
+      <!-- Mini progress ring -->
+      <circle cx="180" cy="52" r="20" fill="none" stroke="#F1F5F9" stroke-width="6" />
+      <circle cx="180" cy="52" r="20" fill="none" stroke="url(#primaryGrad)" stroke-width="6" stroke-dasharray="88 37.7" stroke-dashoffset="0" stroke-linecap="round" />
+      <text x="180" y="56" font-family="system-ui, sans-serif" font-weight="700" font-size="11" fill="#0F172A" text-anchor="middle">70%</text>
+      <text x="140" y="94" font-family="system-ui, sans-serif" font-weight="600" font-size="11" fill="#059669">↑ 8.1% vs target</text>
+    </g>
+
+    <!-- ── Charts Section ──────────────────────────────────────────────────── -->
+    <!-- Section label -->
+    <text x="112" y="216" font-family="system-ui, sans-serif" font-weight="700" font-size="14" fill="#64748B" letter-spacing="0.3">PERFORMANCE OVERVIEW</text>
+
+    <!-- A. Bar Chart (Monthly Revenue) -->
+    <g id="bar-chart" transform="translate(112, 238)">
+      <text x="0" y="0" font-family="system-ui, sans-serif" font-weight="600" font-size="12" fill="#94A3B8" letter-spacing="0.2">Monthly Revenue ($K)</text>
+
+      <!-- Horizontal grid lines -->
+      <line x1="0" y1="30" x2="360" y2="30" stroke="#F1F5F9" stroke-width="1.5" />
+      <line x1="0" y1="65" x2="360" y2="65" stroke="#F1F5F9" stroke-width="1.5" />
+      <line x1="0" y1="100" x2="360" y2="100" stroke="#F1F5F9" stroke-width="1.5" />
+      <line x1="0" y1="135" x2="360" y2="135" stroke="#F1F5F9" stroke-width="1.5" />
+      <line x1="0" y1="170" x2="360" y2="170" stroke="#F1F5F9" stroke-width="1" />
+
+      <!-- Y-axis labels -->
+      <text x="-6" y="34" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#94A3B8" text-anchor="end">80</text>
+      <text x="-6" y="69" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#94A3B8" text-anchor="end">60</text>
+      <text x="-6" y="104" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#94A3B8" text-anchor="end">40</text>
+      <text x="-6" y="139" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#94A3B8" text-anchor="end">20</text>
+
+      <!-- Bars with refined styling -->
+      <!-- Jan: 48K → height 102 -->
+      <g>
+        <rect x="18" y="68" width="32" height="102" rx="6" fill="url(#primaryGrad)" opacity="0.85" />
+        <rect x="18" y="68" width="32" height="102" rx="6" fill="none" stroke="#2563EB" stroke-opacity="0.2" stroke-width="1" />
+        <text x="34" y="62" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#475569" text-anchor="middle">48</text>
+        <text x="34" y="188" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">Jan</text>
+      </g>
+
+      <!-- Feb: 72K → height 153 -->
+      <g>
+        <rect x="70" y="17" width="32" height="153" rx="6" fill="url(#secondaryGrad)" opacity="0.85" />
+        <rect x="70" y="17" width="32" height="153" rx="6" fill="none" stroke="#6366F1" stroke-opacity="0.2" stroke-width="1" />
+        <text x="86" y="11" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#475569" text-anchor="middle">72</text>
+        <text x="86" y="188" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">Feb</text>
+      </g>
+
+      <!-- Mar: 55K → height 117 -->
+      <g>
+        <rect x="122" y="53" width="32" height="117" rx="6" fill="url(#primaryGrad)" opacity="0.75" />
+        <rect x="122" y="53" width="32" height="117" rx="6" fill="none" stroke="#2563EB" stroke-opacity="0.2" stroke-width="1" />
+        <text x="138" y="47" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#475569" text-anchor="middle">55</text>
+        <text x="138" y="188" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">Mar</text>
+      </g>
+
+      <!-- Apr: 80K → height 170 (max) -->
+      <g>
+        <rect x="174" y="0" width="32" height="170" rx="6" fill="url(#successGrad)" opacity="0.85" />
+        <rect x="174" y="0" width="32" height="170" rx="6" fill="none" stroke="#10B981" stroke-opacity="0.25" stroke-width="1" />
+        <text x="190" y="-6" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#047857" text-anchor="middle">80</text>
+        <text x="190" y="188" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">Apr</text>
+        <!-- Highlight indicator -->
+        <rect x="174" y="0" width="32" height="4" rx="2" fill="#047857" opacity="0.6" />
+      </g>
+
+      <!-- May: 65K → height 138 -->
+      <g>
+        <rect x="226" y="32" width="32" height="138" rx="6" fill="url(#secondaryGrad)" opacity="0.75" />
+        <rect x="226" y="32" width="32" height="138" rx="6" fill="none" stroke="#6366F1" stroke-opacity="0.2" stroke-width="1" />
+        <text x="242" y="26" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#475569" text-anchor="middle">65</text>
+        <text x="242" y="188" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">May</text>
+      </g>
+
+      <!-- Jun: 74K → height 157 -->
+      <g>
+        <rect x="278" y="13" width="32" height="157" rx="6" fill="url(#primaryGrad)" opacity="0.85" />
+        <rect x="278" y="13" width="32" height="157" rx="6" fill="none" stroke="#2563EB" stroke-opacity="0.2" stroke-width="1" />
+        <text x="294" y="7" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#475569" text-anchor="middle">74</text>
+        <text x="294" y="188" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">Jun</text>
+      </g>
+
+      <!-- Trend line overlay -->
+      <path d="M 34 68 Q 60 20 86 17 Q 112 40 138 53 Q 164 -5 190 0 Q 216 28 242 32 Q 268 8 294 13" 
+            fill="none" stroke="#94A3B8" stroke-opacity="0.5" stroke-width="1.5" stroke-dasharray="6 4" />
+    </g>
+
+    <!-- B. Donut Chart (Expense Breakdown) -->
+    <g id="donut-chart" transform="translate(500, 238)">
+      <text x="0" y="0" font-family="system-ui, sans-serif" font-weight="600" font-size="12" fill="#94A3B8" letter-spacing="0.2">Expense Breakdown</text>
+
+      <!-- Donut -->
+      <g transform="translate(100, 105)">
+        <!-- Outer ring (background) -->
+        <circle cx="0" cy="0" r="80" fill="none" stroke="#F1F5F9" stroke-width="26" />
+
+        <!-- Segment 1: 45% — Operations (Blue) -->
+        <circle cx="0" cy="0" r="80" fill="none" stroke="url(#primaryGrad)" stroke-width="26"
+                stroke-dasharray="226.2 276.5" stroke-dashoffset="0" stroke-linecap="butt" opacity="0.9" />
+
+        <!-- Segment 2: 35% — Salaries (Purple) -->
+        <circle cx="0" cy="0" r="80" fill="none" stroke="url(#accentGrad)" stroke-width="26"
+                stroke-dasharray="175.9 326.8" stroke-dashoffset="-226.2" stroke-linecap="butt" opacity="0.9" />
+
+        <!-- Segment 3: 20% — Marketing (Green) -->
+        <circle cx="0" cy="0" r="80" fill="none" stroke="url(#successGrad)" stroke-width="26"
+                stroke-dasharray="100.5 402.2" stroke-dashoffset="-402.1" stroke-linecap="butt" opacity="0.9" />
+
+        <!-- Inner subtle ring -->
+        <circle cx="0" cy="0" r="67" fill="none" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.5" />
+        <circle cx="0" cy="0" r="93" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1" />
+
+        <!-- Center text -->
+        <text x="0" y="-6" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="800" font-size="22" fill="#0F172A" text-anchor="middle" letter-spacing="-0.3">$22.8k</text>
+        <text x="0" y="14" font-family="system-ui, sans-serif" font-weight="600" font-size="11" fill="#94A3B8" text-anchor="middle" letter-spacing="0.2">TOTAL</text>
+      </g>
+
+      <!-- Legend -->
+      <g transform="translate(215, 62)">
+        <rect x="0" y="0" width="10" height="10" rx="3" fill="url(#primaryGrad)" />
+        <text x="18" y="9" font-family="system-ui, sans-serif" font-weight="600" font-size="12" fill="#334155">Operations 45%</text>
+
+        <rect x="0" y="22" width="10" height="10" rx="3" fill="url(#accentGrad)" />
+        <text x="18" y="31" font-family="system-ui, sans-serif" font-weight="600" font-size="12" fill="#334155">Salaries 35%</text>
+
+        <rect x="0" y="44" width="10" height="10" rx="3" fill="url(#successGrad)" />
+        <text x="18" y="53" font-family="system-ui, sans-serif" font-weight="600" font-size="12" fill="#334155">Marketing 20%</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ====================== FOOTER BADGES ================================== -->
+  <g id="footer-badges">
+    <!-- Badge: HTML5 -->
+    <g transform="translate(310, 806)">
+      <rect x="0" y="0" width="120" height="36" rx="18" fill="#FFFFFF" filter="url(#badgeShadow)" stroke="#F1F5F9" stroke-width="1" />
+      <path d="M 18 10 L 29 14 L 40 10 L 40 22 C 40 28 29 32 29 32 C 29 32 18 28 18 22 Z" fill="#E44D26" />
+      <text x="52" y="23" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="700" font-size="13" fill="#334155">HTML5</text>
+    </g>
+
+    <!-- Badge: Tailwind CSS -->
+    <g transform="translate(446, 806)">
+      <rect x="0" y="0" width="140" height="36" rx="18" fill="#FFFFFF" filter="url(#badgeShadow)" stroke="#F1F5F9" stroke-width="1" />
+      <path d="M 15 20 C 19 14 24 14 28 20 C 32 14 37 14 41 20" fill="none" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round" />
+      <text x="52" y="23" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="700" font-size="13" fill="#334155">Tailwind CSS</text>
+    </g>
+
+    <!-- Badge: JavaScript -->
+    <g transform="translate(602, 806)">
+      <rect x="0" y="0" width="120" height="36" rx="18" fill="#FFFFFF" filter="url(#badgeShadow)" stroke="#F1F5F9" stroke-width="1" />
+      <rect x="18" y="12" width="12" height="12" rx="3" fill="#F7DF1E" />
+      <text x="24" y="21" font-family="system-ui, sans-serif" font-weight="900" font-size="7" fill="#000000" text-anchor="middle">JS</text>
+      <text x="42" y="23" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="700" font-size="13" fill="#334155">JavaScript</text>
+    </g>
+
+    <!-- Badge: Responsive -->
+    <g transform="translate(738, 806)">
+      <rect x="0" y="0" width="130" height="36" rx="18" fill="#FFFFFF" filter="url(#badgeShadow)" stroke="#F1F5F9" stroke-width="1" />
+      <rect x="16" y="13" width="10" height="8" rx="2" fill="#3B82F6" />
+      <rect x="18" y="15" width="6" height="4" rx="1" fill="#FFFFFF" />
+      <rect x="32" y="16" width="5" height="7" rx="1" fill="#10B981" />
+      <rect x="33" y="17" width="3" height="5" rx="0.5" fill="#FFFFFF" />
+      <text x="48" y="23" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="700" font-size="13" fill="#334155">Responsive</text>
+    </g>
+
+    <!-- Badge: Bilingual -->
+    <g transform="translate(884, 806)">
+      <rect x="0" y="0" width="120" height="36" rx="18" fill="#FFFFFF" filter="url(#badgeShadow)" stroke="#F1F5F9" stroke-width="1" />
+      <g transform="translate(16, 11)">
+        <path d="M 2 4 L 8 4 M 12 12 L 8 12 M 5 0 L 9 16" stroke="#7C3AED" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M 8 0 L 4 16" stroke="#7C3AED" stroke-width="1.8" stroke-linecap="round" />
+      </g>
+      <text x="42" y="23" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="700" font-size="13" fill="#334155">Bilingual</text>
+    </g>
+
+    <!-- Badge: SVG -->
+    <g transform="translate(1020, 806)">
+      <rect x="0" y="0" width="90" height="36" rx="18" fill="#FFFFFF" filter="url(#badgeShadow)" stroke="#F1F5F9" stroke-width="1" />
+      <circle cx="18" cy="13" r="2.5" fill="#2563EB" />
+      <circle cx="30" cy="23" r="2.5" fill="#7C3AED" />
+      <circle cx="18" cy="23" r="2.5" fill="#10B981" />
+      <line x1="18" y1="15.5" x2="18" y2="20.5" stroke="#CBD5E1" stroke-width="1.5" />
+      <line x1="20.5" y1="23" x2="27.5" y2="23" stroke="#CBD5E1" stroke-width="1.5" />
+      <line x1="20" y1="16" x2="28" y2="21" stroke="#CBD5E1" stroke-width="1.5" />
+      <text x="42" y="23" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="700" font-size="13" fill="#334155">SVG</text>
+    </g>
+  </g>
+
+</svg>

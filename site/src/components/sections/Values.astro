@@ -1,0 +1,42 @@
+---
+import { t } from '../../utils/i18n';
+
+interface Props {
+  lang: string | undefined;
+}
+
+const { lang } = Astro.props;
+
+const cards = [
+  { n: 1, icon: '<path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>' },
+  { n: 2, icon: '<polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>' },
+  { n: 3, icon: '<circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>' },
+];
+---
+
+<section id="about" class="py-16 md:py-24 bg-neutral-bg dark:bg-neutral-dark/60">
+  <div class="max-w-container mx-auto px-6">
+    <div class="mb-12 text-center" data-aos="fade-up">
+      <h2 class="font-heading text-h2 text-secondary dark:text-white mb-4">{t('values.title', lang)}</h2>
+      <p class="text-secondary/70 dark:text-white/70 max-w-2xl mx-auto">
+        {t('values.subtitle', lang)}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {cards.map((c) => (
+        <div
+          class="group bg-white dark:bg-neutral-dark border border-gray-100 dark:border-gray-800 rounded-xl p-8 shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 hover:bg-gradient-highlight dark:hover:bg-gradient-to-br dark:hover:from-primary/5 dark:hover:to-orange-500/5"
+          data-aos="fade-up"
+          data-aos-delay={c.n * 100}
+        >
+          <div class="mb-6 text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={c.icon}></svg>
+          </div>
+          <h3 class="font-heading text-xl text-secondary dark:text-white mb-3 group-hover:text-primary transition-colors duration-300">{t(`values.card${c.n}Title`, lang)}</h3>
+          <p class="text-secondary/70 dark:text-white/70">{t(`values.card${c.n}Text`, lang)}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

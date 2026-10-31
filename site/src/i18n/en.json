@@ -1,0 +1,92 @@
+{
+  "site": {
+    "title": "Amr AL-Mukardi | Educator · Web Developer · Creative Designer",
+    "description": "Amr AL-Mukardi — English teacher, web developer, and creative designer. Where Education Meets Technology & Creativity."
+  },
+  "nav": {
+    "about": "About",
+    "projects": "Work",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "menu": "Menu"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Amr AL-Mukardi",
+    "pitch": "I'm an educator by profession, a developer by practice, and a creative thinker by nature.",
+    "roles": [
+      "Educator",
+      "Web Developer",
+      "Creative Designer",
+      "AI Enthusiast"
+    ],
+    "ctaAbout": "More About Me",
+    "imageAlt": "Amr AL-Mukardi"
+  },
+  "values": {
+    "title": "About Me",
+    "subtitle": "More Than a Profession — A Mindset of Continuous Creation",
+    "card1Title": "Educator",
+    "card1Text": "My journey began with English language teaching, where I discovered the power of communication, structured learning, and making complex ideas easier to understand.",
+    "card2Title": "Web Developer",
+    "card2Text": "I build digital experiences that communicate clearly, make information easier to understand, and help people learn, explore, and interact.",
+    "card3Title": "Creative Designer",
+    "card3Text": "I design information-rich visuals, create interactive educational lessons, and experiment with AI-powered solutions."
+  },
+  "skills": {
+    "title": "Skills & Technologies"
+  },
+  "projects": {
+    "title": "Selected Work",
+    "subtitle": "Turning Ideas Into Digital Experiences — A selection of projects reflecting my interests across education, web development, and creative design.",
+    "viewProject": "Visit Project",
+    "allProjectsButtonText": "All Projects on GitHub",
+    "filterLabel": "Filter projects",
+    "shown": "Showing {n} projects",
+    "filters": {
+      "all": "All",
+      "web": "Web",
+      "education": "Education",
+      "design": "Presentations",
+      "data": "Data"
+    }
+  },
+  "timeline": {
+    "title": "Experience",
+    "present": "Present"
+  },
+  "education": {
+    "title": "Education & Certificates",
+    "academic": "Academic Education",
+    "certs": "Courses & Certificates",
+    "download": "Download",
+    "course": "Course",
+    "spec": "Specialization",
+    "showAll": "Show all certificates ({n})",
+    "showLess": "Show less"
+  },
+  "testimonials": {
+    "title": "Testimonials"
+  },
+  "footerCTA": {
+    "title": "Teach. Build. Create.",
+    "subtitle": "Technology is a tool. Creativity is a perspective. Education is a purpose.",
+    "buttonText": "Follow me on GitHub"
+  },
+  "contact": {
+    "title": "Let's Collaborate",
+    "subtitle": "Whether you need a website, an interactive educational experience, a compelling visual presentation, or a creative digital solution, I'd love to hear what you're working on. Let's turn your ideas into something purposeful, engaging, and real.",
+    "emailTitle": "Email",
+    "emailButtonText": "Email me",
+    "whatsappTitle": "WhatsApp",
+    "whatsappButtonText": "Start a chat",
+    "linkedinTitle": "LinkedIn",
+    "linkedinButtonText": "Connect on LinkedIn"
+  },
+  "footer": {
+    "copyright": "All rights reserved."
+  }
+}

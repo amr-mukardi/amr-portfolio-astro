@@ -1,0 +1,64 @@
+---
+import { PaletteIcon, Code2Icon, LayersIcon, ImageIcon, PenToolIcon, FileCodeIcon, BracesIcon, TerminalIcon, RocketIcon, Globe2Icon, LayoutGridIcon, Edit3Icon, CheckSquareIcon, BookTextIcon, LayoutDashboardIcon, FigmaIcon, GraduationCapIcon, BrainIcon, LaptopIcon, LanguagesIcon, SparklesIcon, FileTextIcon } from '@lucide/astro';
+import { t } from '../../utils/i18n';
+import { skills, pick } from '../../data/content';
+
+interface Props {
+  lang: string | undefined;
+}
+
+const { lang } = Astro.props;
+
+const icons: Record<string, any> = {
+  graduation: GraduationCapIcon, code: Code2Icon, palette: PaletteIcon, brain: BrainIcon, laptop: LaptopIcon,
+  languages: LanguagesIcon, book: BookTextIcon, sparkles: SparklesIcon, layers: LayersIcon, image: ImageIcon,
+  filecode: FileCodeIcon, pen: PenToolIcon, braces: BracesIcon, grid: LayoutGridIcon, rocket: RocketIcon,
+  globe: Globe2Icon, dashboard: LayoutDashboardIcon, filetext: FileTextIcon, figma: FigmaIcon,
+  terminal: TerminalIcon, check: CheckSquareIcon, edit: Edit3Icon,
+};
+---
+
+<section id="skills" class="py-16 md:py-24">
+  <div class="max-w-container mx-auto px-6">
+    <div class="mb-8 md:mb-10 text-center" data-aos="fade-up" data-aos-duration="800">
+      <h2 class="font-heading text-h2 text-secondary dark:text-white mb-4">{t('skills.title', lang)}</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      {skills.map((cluster, index) => {
+        const Icon = icons[cluster.icon];
+        const lastOdd = index === skills.length - 1 && skills.length % 2 === 1;
+        return (
+          <div
+            id={cluster.id}
+            class:list={['skill-cluster bg-white dark:bg-neutral-dark border border-gray-100 dark:border-gray-800 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300', lastOdd && 'md:col-span-2']}
+            data-aos="fade-up"
+            data-aos-duration="600"
+            data-aos-delay={(index % 2) * 150}
+          >
+            <div class="cluster-header flex items-center mb-4">
+              <div class="icon-container me-4 text-primary bg-primary/5 p-3 rounded-lg">
+                <Icon size={26} stroke-width={1.75} />
+              </div>
+              <h3 class="font-heading text-xl text-secondary dark:text-white">{pick(cluster.title, lang)}</h3>
+            </div>
+
+            <div class="cluster-tools grid grid-cols-2 sm:grid-cols-3 gap-4 mt-6">
+              {cluster.tools.map((tool) => {
+                const ToolIcon = icons[tool.icon];
+                return (
+                  <div class="tool-item flex flex-col items-center text-center">
+                    <div class="tool-icon text-primary bg-primary/5 p-3 rounded-lg mb-2">
+                      <ToolIcon size={20} stroke-width={1.75} />
+                    </div>
+                    <p class="text-sm font-medium text-secondary dark:text-white">{pick(tool.name, lang)}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>
