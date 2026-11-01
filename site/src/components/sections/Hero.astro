@@ -9,7 +9,7 @@ const lang = Astro.currentLocale;
 const roles: string[] = (getTranslations(lang) as any).hero.roles;
 ---
 
-<section id="start" class="pt-28 pb-16 md:pt-36 md:pb-24">
+<section id="start" class="relative pt-28 pb-16 md:pt-36 md:pb-24">
   <div class="max-w-container mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-gutter">
     <div class="md:col-span-7 flex flex-col justify-center">
       <span class="font-mono text-primary text-sm mb-4">{t('hero.greeting', lang)}</span>
@@ -53,11 +53,13 @@ const roles: string[] = (getTranslations(lang) as any).hero.roles;
   </div>
 
   <!-- Scroll Down Indicator -->
-  <div id="scroll-indicator" class="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-100 animate-bounce cursor-pointer" onclick="document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary dark:text-highlightBlue">
-      <path d="M12 5v14"></path>
-      <path d="m19 12-7 7-7-7"></path>
-    </svg>
+  <div id="scroll-indicator" class="absolute bottom-6 inset-x-0 flex justify-center pointer-events-none">
+    <a href="#about" aria-label={t('hero.ctaAbout', lang)} class="pointer-events-auto animate-bounce">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary dark:text-highlightBlue" aria-hidden="true">
+        <path d="M12 5v14"></path>
+        <path d="m19 12-7 7-7-7"></path>
+      </svg>
+    </a>
   </div>
 </section>
 
