@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://amr-mukardi-portfolio.vercel.app/sitemap-index.xml
