@@ -1,0 +1,426 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- ==================== BACKGROUND GRADIENTS ==================== -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0f" />
+      <stop offset="30%" stop-color="#12121d" />
+      <stop offset="55%" stop-color="#0f0f18" />
+      <stop offset="85%" stop-color="#14141f" />
+      <stop offset="100%" stop-color="#0a0a0f" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="45%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="accentGradV" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#d97706" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#fbbf24" />
+    </linearGradient>
+    <linearGradient id="accentGradH" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="50%" stop-color="#fde68a" />
+      <stop offset="100%" stop-color="#fbbf24" />
+    </linearGradient>
+
+    <!-- Metallic Gold Gradient for Premium Logo -->
+    <linearGradient id="metallicGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7" />
+      <stop offset="12%" stop-color="#fbbf24" />
+      <stop offset="25%" stop-color="#fef3c7" />
+      <stop offset="40%" stop-color="#d97706" />
+      <stop offset="55%" stop-color="#fbbf24" />
+      <stop offset="70%" stop-color="#fde68a" />
+      <stop offset="85%" stop-color="#b45309" />
+      <stop offset="100%" stop-color="#fef3c7" />
+    </linearGradient>
+    <linearGradient id="metallicGoldLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55" />
+      <stop offset="40%" stop-color="#fef3c7" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Glass Gradients -->
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+    <linearGradient id="glassGradSubtle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01" />
+    </linearGradient>
+    <linearGradient id="glassHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.16" />
+      <stop offset="30%" stop-color="#ffffff" stop-opacity="0.03" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+    <linearGradient id="glassReflection" x1="0%" y1="0%" x2="60%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.0" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+
+    <!-- Countdown Card Background -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07" />
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.03" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.015" />
+    </linearGradient>
+
+    <!-- Button Highlight Gradient -->
+    <linearGradient id="buttonHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25" />
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Vignette Gradient -->
+    <radialGradient id="vignette" cx="50%" cy="50%" r="72%">
+      <stop offset="55%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="85%" stop-color="#000000" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.5" />
+    </radialGradient>
+
+    <!-- Aurora Glow Gradients -->
+    <radialGradient id="auroraTop" cx="50%" cy="30%" r="45%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.12" />
+      <stop offset="50%" stop-color="#f59e0b" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#0a0a0f" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="auroraBottomLeft" cx="30%" cy="70%" r="40%">
+      <stop offset="0%" stop-color="#d97706" stop-opacity="0.08" />
+      <stop offset="60%" stop-color="#b45309" stop-opacity="0.02" />
+      <stop offset="100%" stop-color="#0a0a0f" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="auroraBottomRight" cx="75%" cy="65%" r="35%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.06" />
+      <stop offset="55%" stop-color="#f59e0b" stop-opacity="0.02" />
+      <stop offset="100%" stop-color="#0a0a0f" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- ==================== FILTERS ==================== -->
+    <filter id="glowSoft" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="glowStrong" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18" result="blur1" />
+      <feGaussianBlur stdDeviation="35" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="glowBloom" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feColorMatrix type="matrix" in="blur" values="1 0 0 0 0  0 0.8 0 0 0  0 0.4 0 0 0  0 0 0 0.5 0" result="colored" />
+      <feMerge>
+        <feMergeNode in="colored" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="dropShadow" x="-15%" y="-15%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+    <filter id="dropShadowSubtle" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+    <filter id="innerGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="noiseFilter" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="4" stitchTiles="stitch" result="noise" />
+      <feColorMatrix type="saturate" values="0" in="noise" result="grayNoise" />
+      <feComponentTransfer in="grayNoise" result="mutedNoise">
+        <feFuncA type="linear" slope="0.03" />
+      </feComponentTransfer>
+    </filter>
+
+    <!-- ==================== GRID PATTERN ==================== -->
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1" />
+      <circle cx="0" cy="0" r="1.5" fill="#ffffff" fill-opacity="0.05" />
+    </pattern>
+
+    <!-- ==================== PREMIUM SOCIAL MEDIA ICONS ==================== -->
+    <!-- Each icon uses currentColor for easy theming and a dark accent for the inner symbol. -->
+    
+    <!-- Facebook (corrected, clean 'f' letterform) -->
+    <g id="iconFacebook">
+      <circle cx="0" cy="0" r="10" fill="currentColor" />
+      <path d="M-2-5 h4.5 M-2-5 v10 M-2-1 h3.5" fill="none" stroke="#0a0a0f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+
+    <!-- X (Twitter) -->
+    <g id="iconX">
+      <circle cx="0" cy="0" r="10" fill="currentColor" />
+      <path d="M-3.5-3.5L3.5 3.5M3.5-3.5L-3.5 3.5" stroke="#0a0a0f" stroke-width="1.5" stroke-linecap="round" />
+    </g>
+
+    <!-- Instagram -->
+    <g id="iconInstagram">
+      <circle cx="0" cy="0" r="10" fill="currentColor" />
+      <rect x="-4.5" y="-4.5" width="9" height="9" rx="2.5" fill="none" stroke="#0a0a0f" stroke-width="1.2" />
+      <circle cx="0" cy="0" r="2.5" fill="none" stroke="#0a0a0f" stroke-width="1" />
+      <circle cx="3.5" cy="-3.5" r="0.8" fill="#0a0a0f" />
+    </g>
+
+    <!-- LinkedIn -->
+    <g id="iconLinkedIn">
+      <rect x="-5" y="-5" width="10" height="10" rx="2" fill="currentColor" />
+      <text x="0" y="0.8" text-anchor="middle" dominant-baseline="middle" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="900" font-size="7" fill="#0a0a0f">in</text>
+    </g>
+
+    <!-- YouTube -->
+    <g id="iconYouTube">
+      <rect x="-6.5" y="-4.5" width="13" height="9" rx="2.5" fill="currentColor" />
+      <polygon points="-3,-2.2 -3,2.2 2.5,0" fill="#0a0a0f" />
+    </g>
+
+    <!-- ==================== CURSOR INDICATOR ==================== -->
+    <g id="cursorBlink">
+      <rect x="0" y="-7" width="1.8" height="14" rx="0.9" fill="#ffffff" fill-opacity="0.7">
+        <animate attributeName="opacity" values="0.7;0.1;0.7" dur="1.2s" repeatCount="indefinite" />
+      </rect>
+    </g>
+  </defs>
+
+  <!-- ==================== STYLES FOR HOVER EFFECTS ==================== -->
+  <style>
+    .social-icon {
+      cursor: pointer;
+      transition: transform 250ms ease, filter 250ms ease;
+      transform-origin: center;
+    }
+    .social-icon:hover {
+      transform: scale(1.08);
+      filter: url(#glowSoft);
+    }
+    .social-icon .circle-bg {
+      transition: fill-opacity 250ms ease, stroke 250ms ease;
+    }
+    .social-icon:hover .circle-bg {
+      fill-opacity: 0.18;
+      stroke: #fbbf24;
+      stroke-opacity: 0.6;
+    }
+    .social-icon .icon-use {
+      color: #ffffff;
+      transition: color 250ms ease;
+    }
+    .social-icon:hover .icon-use {
+      color: #fbbf24;
+    }
+    .social-icon .inner-highlight {
+      transition: opacity 250ms ease;
+    }
+    .social-icon:hover .inner-highlight {
+      opacity: 0.8;
+    }
+    .social-icon .hover-glow {
+      transition: opacity 250ms ease, r 250ms ease;
+    }
+    .social-icon:hover .hover-glow {
+      opacity: 0.4;
+      r: 22;
+    }
+  </style>
+
+  <!-- ==================== BACKGROUND ==================== -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+  <rect width="1200" height="630" fill="url(#auroraTop)" />
+  <rect width="1200" height="630" fill="url(#auroraBottomLeft)" />
+  <rect width="1200" height="630" fill="url(#auroraBottomRight)" />
+  <circle cx="600" cy="200" r="380" fill="url(#accentGrad)" opacity="0.05" filter="url(#glowStrong)" />
+  <circle cx="350" cy="480" r="240" fill="url(#accentGradV)" opacity="0.04" filter="url(#glowStrong)" />
+  <circle cx="880" cy="420" r="200" fill="url(#accentGradV)" opacity="0.03" filter="url(#glowStrong)" />
+  <circle cx="600" cy="320" r="300" fill="#fbbf24" opacity="0.02" filter="url(#glowStrong)" />
+  <rect width="1200" height="630" fill="url(#grid)" />
+  <rect width="1200" height="630" filter="url(#noiseFilter)" opacity="0.7" style="pointer-events:none;" />
+  <rect width="1200" height="630" fill="url(#vignette)" style="pointer-events:none;" />
+
+  <!-- ==================== LANGUAGE TOGGLE PILL ==================== -->
+  <g transform="translate(1050, 60)" filter="url(#dropShadowSubtle)">
+    <rect x="-52" y="-16" width="104" height="32" rx="16" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" />
+    <rect x="-48" y="-13" width="46" height="26" rx="13" fill="#fbbf24" />
+    <rect x="-48" y="-13" width="46" height="13" rx="13" fill="url(#buttonHighlight)" opacity="0.5" />
+    <text x="-25" y="5" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Inter', 'Segoe UI', sans-serif" font-size="13" font-weight="800" fill="#0a0a0f" letter-spacing="0.5">EN</text>
+    <text x="26" y="5" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Tajawal', 'Noto Kufi Arabic', sans-serif" font-size="13" font-weight="600" fill="#ffffff" fill-opacity="0.65" letter-spacing="0.3">عربي</text>
+  </g>
+
+  <!-- ==================== LOGO & PROJECT NAME ==================== -->
+  <g transform="translate(600, 135)" filter="url(#dropShadow)">
+    <ellipse cx="0" cy="105" rx="55" ry="12" fill="#fbbf24" opacity="0.08" filter="url(#glowSoft)" />
+    <g transform="scale(1.1)">
+      <path d="M-25-25 L5-35 L35-15 L5-5 Z" fill="url(#metallicGold)" opacity="0.95" />
+      <path d="M-25-25 L5-35 L35-15 L5-5 Z" fill="url(#metallicGoldLight)" opacity="0.5" />
+      <path d="M-23-24 L5-33" stroke="#fef3c7" stroke-opacity="0.5" stroke-width="0.8" fill="none" />
+      <path d="M5-33 L33-14" stroke="#fef3c7" stroke-opacity="0.3" stroke-width="0.6" fill="none" />
+      <path d="M-25-25 L-25 25 L5 35 L5-5 Z" fill="url(#metallicGold)" opacity="0.85" />
+      <path d="M-25-25 L-25 25 L5 35 L5-5 Z" fill="#f59e0b" opacity="0.3" />
+      <path d="M-24-24 L-24 24" stroke="#fde68a" stroke-opacity="0.3" stroke-width="0.6" fill="none" />
+      <path d="M-25 25 L5 35 L35 15 L5 5 Z" fill="url(#metallicGold)" opacity="0.7" />
+      <path d="M-25 25 L5 35 L35 15 L5 5 Z" fill="#b45309" opacity="0.4" />
+      <path d="M-22-24 L3-33" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1.2" fill="none" stroke-linecap="round" />
+      <path d="M-25-25 L5-35 L5-5 Z" fill="#fde68a" opacity="0.2" />
+      <path d="M5-5 L5 35 L35 15 Z" fill="#1a1a1a" opacity="0.3" />
+      <path d="M-25-25 L-25 25 L5-5 Z" fill="#ffffff" opacity="0.05" />
+    </g>
+    <text y="58" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Inter', 'Segoe UI', sans-serif" font-size="54" font-weight="900" fill="#ffffff" letter-spacing="3.5">NexaCore</text>
+    <text y="58" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Inter', 'Segoe UI', sans-serif" font-size="54" font-weight="900" fill="#ffffff" fill-opacity="0.06" letter-spacing="3.5" transform="translate(1, -1)">NexaCore</text>
+    <text y="95" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Tajawal', 'Noto Kufi Arabic', sans-serif" font-size="36" font-weight="800" fill="url(#accentGradH)" letter-spacing="3">نيكسا كور</text>
+    <text y="95" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Tajawal', 'Noto Kufi Arabic', sans-serif" font-size="36" font-weight="800" fill="#fef3c7" fill-opacity="0.15" letter-spacing="3" transform="translate(0, -1)">نيكسا كور</text>
+  </g>
+
+  <!-- ==================== BILINGUAL TAGLINE ==================== -->
+  <g transform="translate(600, 297)">
+    <text text-anchor="middle" dominant-baseline="alphabetic" font-family="'Inter', 'Segoe UI', sans-serif" font-size="27" font-weight="600" fill="#ffffff" fill-opacity="0.82" letter-spacing="1.2">Coming Soon — قريباً</text>
+  </g>
+
+  <!-- ==================== DECORATIVE SEPARATOR ==================== -->
+  <g transform="translate(600, 322)">
+    <line x1="-185" y1="0" x2="-60" y2="0" stroke="url(#accentGradH)" stroke-width="1.8" opacity="0.5" stroke-linecap="round" />
+    <polygon points="0,-4 5,0 0,4 -5,0" fill="#fbbf24" opacity="0.8" filter="url(#glowSoft)" />
+    <line x1="60" y1="0" x2="185" y2="0" stroke="url(#accentGradH)" stroke-width="1.8" opacity="0.5" stroke-linecap="round" />
+  </g>
+
+  <!-- ==================== COUNTDOWN MOCKUP ==================== -->
+  <g transform="translate(600, 405)">
+    <rect x="-285" y="-38" width="570" height="94" rx="18" fill="url(#cardBg)" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" filter="url(#dropShadowSubtle)" />
+    <rect x="-285" y="-38" width="570" height="94" rx="18" fill="none" stroke="url(#accentGradH)" stroke-width="0.6" opacity="0.25" />
+    <rect x="-283" y="-36" width="566" height="45" rx="16" fill="url(#glassHighlight)" />
+    <!-- Panel 1: Days -->
+    <g>
+      <rect x="-222" y="-30" width="86" height="78" rx="10" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8" />
+      <rect x="-222" y="-30" width="86" height="78" rx="10" fill="none" stroke="url(#accentGradH)" stroke-width="0.4" opacity="0.3" />
+      <rect x="-221" y="-29" width="84" height="38" rx="9" fill="url(#glassHighlight)" opacity="0.6" />
+      <path d="M-215-28L-195-28" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.6" fill="none" />
+      <text x="-178" y="4" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Inter', 'Segoe UI', monospace" font-weight="900" font-size="38" fill="#fbbf24" filter="url(#glowSoft)" letter-spacing="1">198</text>
+      <text x="-178" y="30" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="600" font-size="12" fill="#ffffff" fill-opacity="0.5" letter-spacing="2.5">DAYS</text>
+      <text x="-178" y="44" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Tajawal', 'Noto Kufi Arabic', sans-serif" font-weight="500" font-size="10" fill="#ffffff" fill-opacity="0.35">أيام</text>
+    </g>
+    <text x="-124" y="8" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Inter', 'Segoe UI', monospace" font-weight="900" font-size="30" fill="#fbbf24" fill-opacity="0.55" filter="url(#glowSoft)">:</text>
+    <!-- Panel 2: Hours -->
+    <g>
+      <rect x="-100" y="-30" width="86" height="78" rx="10" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8" />
+      <rect x="-100" y="-30" width="86" height="78" rx="10" fill="none" stroke="url(#accentGradH)" stroke-width="0.4" opacity="0.3" />
+      <rect x="-99" y="-29" width="84" height="38" rx="9" fill="url(#glassHighlight)" opacity="0.6" />
+      <path d="M-93-28L-73-28" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.6" fill="none" />
+      <text x="-55" y="4" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Inter', 'Segoe UI', monospace" font-weight="900" font-size="38" fill="#fbbf24" filter="url(#glowSoft)" letter-spacing="1">12</text>
+      <text x="-55" y="30" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="600" font-size="12" fill="#ffffff" fill-opacity="0.5" letter-spacing="2.5">HOURS</text>
+      <text x="-55" y="44" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Tajawal', 'Noto Kufi Arabic', sans-serif" font-weight="500" font-size="10" fill="#ffffff" fill-opacity="0.35">ساعات</text>
+    </g>
+    <text x="-2" y="8" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Inter', 'Segoe UI', monospace" font-weight="900" font-size="30" fill="#fbbf24" fill-opacity="0.55" filter="url(#glowSoft)">:</text>
+    <!-- Panel 3: Minutes -->
+    <g>
+      <rect x="22" y="-30" width="86" height="78" rx="10" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8" />
+      <rect x="22" y="-30" width="86" height="78" rx="10" fill="none" stroke="url(#accentGradH)" stroke-width="0.4" opacity="0.3" />
+      <rect x="23" y="-29" width="84" height="38" rx="9" fill="url(#glassHighlight)" opacity="0.6" />
+      <path d="M29-28L49-28" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.6" fill="none" />
+      <text x="65" y="4" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Inter', 'Segoe UI', monospace" font-weight="900" font-size="38" fill="#fbbf24" filter="url(#glowSoft)" letter-spacing="1">34</text>
+      <text x="65" y="30" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="600" font-size="12" fill="#ffffff" fill-opacity="0.5" letter-spacing="2.5">MINS</text>
+      <text x="65" y="44" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Tajawal', 'Noto Kufi Arabic', sans-serif" font-weight="500" font-size="10" fill="#ffffff" fill-opacity="0.35">دقائق</text>
+    </g>
+    <text x="120" y="8" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Inter', 'Segoe UI', monospace" font-weight="900" font-size="30" fill="#fbbf24" fill-opacity="0.55" filter="url(#glowSoft)">:</text>
+    <!-- Panel 4: Seconds -->
+    <g>
+      <rect x="142" y="-30" width="86" height="78" rx="10" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8" />
+      <rect x="142" y="-30" width="86" height="78" rx="10" fill="none" stroke="url(#accentGradH)" stroke-width="0.4" opacity="0.3" />
+      <rect x="143" y="-29" width="84" height="38" rx="9" fill="url(#glassHighlight)" opacity="0.6" />
+      <path d="M149-28L169-28" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.6" fill="none" />
+      <text x="185" y="4" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Inter', 'Segoe UI', monospace" font-weight="900" font-size="38" fill="#fbbf24" filter="url(#glowSoft)" letter-spacing="1">56</text>
+      <text x="185" y="30" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="600" font-size="12" fill="#ffffff" fill-opacity="0.5" letter-spacing="2.5">SECS</text>
+      <text x="185" y="44" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Tajawal', 'Noto Kufi Arabic', sans-serif" font-weight="500" font-size="10" fill="#ffffff" fill-opacity="0.35">ثوانٍ</text>
+    </g>
+  </g>
+
+  <!-- ==================== EMAIL SUBSCRIPTION MOCKUP ==================== -->
+  <g transform="translate(600, 535)" filter="url(#dropShadowSubtle)">
+    <rect x="-282" y="-22" width="395" height="52" rx="13" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1.2" />
+    <rect x="-280" y="-20" width="391" height="24" rx="11" fill="url(#glassHighlight)" />
+    <rect x="-282" y="-22" width="395" height="52" rx="13" fill="none" stroke="url(#accentGradH)" stroke-width="0.5" opacity="0.18" />
+    <use href="#iconMail" x="-256" y="4" color="#ffffff" opacity="0.35" />
+    <text x="-235" y="7" text-anchor="start" dominant-baseline="alphabetic" font-family="'Inter', 'Segoe UI', sans-serif" font-size="15" fill="#ffffff" fill-opacity="0.38" letter-spacing="0.4">Enter your email</text>
+    <use href="#cursorBlink" x="-112" y="0" />
+    <text x="108" y="8" text-anchor="end" dominant-baseline="alphabetic" font-family="'Tajawal', 'Noto Kufi Arabic', sans-serif" font-size="9" fill="#ffffff" fill-opacity="0.22">أدخل بريدك الإلكتروني</text>
+    <g transform="translate(122, 0)">
+      <rect x="0" y="-22" width="160" height="52" rx="13" fill="url(#accentGrad)" filter="url(#dropShadowSubtle)" />
+      <rect x="1" y="-21" width="158" height="25" rx="12" fill="url(#buttonHighlight)" />
+      <rect x="0" y="-22" width="160" height="52" rx="13" fill="none" stroke="#fde68a" stroke-width="0.6" opacity="0.35" />
+      <text x="80" y="6" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Inter', 'Segoe UI', sans-serif" font-size="17" font-weight="700" fill="#0a0a0f" letter-spacing="0.8">Notify Me</text>
+      <text x="80" y="23" text-anchor="middle" dominant-baseline="alphabetic" font-family="'Tajawal', 'Noto Kufi Arabic', sans-serif" font-size="11" font-weight="500" fill="#000000" fill-opacity="0.55" letter-spacing="0.5">أعلمني</text>
+      <ellipse cx="40" cy="-15" rx="30" ry="4" fill="#ffffff" opacity="0.2" />
+    </g>
+  </g>
+
+  <!-- ==================== SOCIAL MEDIA ICONS (PREMIUM REDESIGN) ==================== -->
+  <g transform="translate(600, 598)">
+    <line x1="-120" y1="-16" x2="120" y2="-16" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.8" />
+
+    <!-- Facebook -->
+    <g class="social-icon" transform="translate(-80, 0)">
+      <circle cx="0" cy="0" r="16" fill="#fbbf24" opacity="0" class="hover-glow" filter="url(#glowSoft)" />
+      <circle cx="0" cy="0" r="16" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" class="circle-bg" />
+      <path d="M-12-8 A 14 14 0 0 1 12-8" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" class="inner-highlight" />
+      <use href="#iconFacebook" class="icon-use" x="0" y="0" width="20" height="20" />
+    </g>
+
+    <!-- X -->
+    <g class="social-icon" transform="translate(-40, 0)">
+      <circle cx="0" cy="0" r="16" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" class="circle-bg" />
+      <path d="M-12-8 A 14 14 0 0 1 12-8" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" class="inner-highlight" />
+      <use href="#iconX" class="icon-use" x="0" y="0" width="20" height="20" />
+    </g>
+
+    <!-- Instagram -->
+    <g class="social-icon" transform="translate(0, 0)">
+      <circle cx="0" cy="0" r="16" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" class="circle-bg" />
+      <path d="M-12-8 A 14 14 0 0 1 12-8" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" class="inner-highlight" />
+      <use href="#iconInstagram" class="icon-use" x="0" y="0" width="20" height="20" />
+    </g>
+
+    <!-- LinkedIn -->
+    <g class="social-icon" transform="translate(40, 0)">
+      <circle cx="0" cy="0" r="16" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" class="circle-bg" />
+      <path d="M-12-8 A 14 14 0 0 1 12-8" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" class="inner-highlight" />
+      <use href="#iconLinkedIn" class="icon-use" x="0" y="0" width="20" height="20" />
+    </g>
+
+    <!-- YouTube -->
+    <g class="social-icon" transform="translate(80, 0)">
+      <circle cx="0" cy="0" r="16" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" class="circle-bg" />
+      <path d="M-12-8 A 14 14 0 0 1 12-8" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" class="inner-highlight" />
+      <use href="#iconYouTube" class="icon-use" x="0" y="0" width="20" height="20" />
+    </g>
+  </g>
+
+  <!-- ==================== ADDITIONAL DECORATIVE ELEMENTS ==================== -->
+  <g opacity="0.07" style="pointer-events:none;">
+    <circle cx="90" cy="90" r="70" fill="#fbbf24" filter="url(#glowStrong)" opacity="0.6" />
+    <circle cx="1110" cy="540" r="55" fill="#f59e0b" filter="url(#glowStrong)" opacity="0.5" />
+    <path d="M 0 630 L 180 510 L 0 390 Z" fill="#fbbf24" opacity="0.4" />
+    <path d="M 1200 0 L 1020 130 L 1200 270 Z" fill="#f59e0b" opacity="0.35" />
+    <circle cx="200" cy="350" r="40" fill="#fde68a" opacity="0.3" filter="url(#glowSoft)" />
+    <circle cx="1000" cy="180" r="35" fill="#fbbf24" opacity="0.25" filter="url(#glowSoft)" />
+  </g>
+
+  <!-- ==================== FINAL SUBTLE MICRO-DETAILS ==================== -->
+  <line x1="0" y1="0" x2="1200" y2="0" stroke="url(#accentGradH)" stroke-width="1.5" opacity="0.15" />
+  <line x1="0" y1="629.5" x2="1200" y2="629.5" stroke="url(#accentGradH)" stroke-width="1" opacity="0.1" />
+  <g opacity="0.12">
+    <circle cx="30" cy="30" r="2" fill="#fde68a" filter="url(#glowSoft)" />
+    <circle cx="1170" cy="30" r="2" fill="#fde68a" filter="url(#glowSoft)" />
+    <circle cx="30" cy="600" r="1.5" fill="#fde68a" filter="url(#glowSoft)" />
+    <circle cx="1170" cy="600" r="1.5" fill="#fde68a" filter="url(#glowSoft)" />
+  </g>
+</svg>

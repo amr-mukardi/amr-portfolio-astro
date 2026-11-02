@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- ألوان متطابقة مع الاستبيان -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8eef5" />
+      <stop offset="25%" stop-color="#dce3ed" />
+      <stop offset="50%" stop-color="#eef2f7" />
+      <stop offset="75%" stop-color="#e3e9f2" />
+      <stop offset="100%" stop-color="#f0f4f9" />
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a73e8" />
+      <stop offset="100%" stop-color="#4da3ff" />
+    </linearGradient>
+    
+    <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d904f" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+    
+    <linearGradient id="starGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f9ab00" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    
+    <!-- ظلال خفيفة تتناسب مع التصميم الفاتح -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#202124" flood-opacity="0.06" />
+    </filter>
+    
+    <!-- أنماط خلفية متناغمة -->
+    <pattern id="dotGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#202124" opacity="0.04" />
+    </pattern>
+    <pattern id="diagonalLines" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="40" stroke="#5f6368" stroke-width="0.6" opacity="0.06" />
+    </pattern>
+  </defs>
+  
+  <!-- الخلفية الرئيسية بنفس ألوان الاستبيان -->
+  <rect width="1200" height="630" fill="url(#bgGradient)" />
+  <rect width="1200" height="630" fill="url(#dotGrid)" />
+  <rect width="1200" height="630" fill="url(#diagonalLines)" />
+  
+  <!-- دوائر خلفية تجريدية بألوان فاتحة وشفافة -->
+  <circle cx="150" cy="550" r="280" fill="#1a73e8" opacity="0.06" filter="url(#glow)" />
+  <circle cx="1050" cy="50" r="300" fill="#0d904f" opacity="0.05" filter="url(#glow)" />
+  <circle cx="600" cy="300" r="350" fill="#f9ab00" opacity="0.04" filter="url(#glow)" />
+  
+  <!-- ==================== القسم الأيسر: بطاقة محاكاة الاستبيان ==================== -->
+  <g transform="translate(60, 70)" filter="url(#softShadow)">
+    <!-- بطاقة بيضاء تشبه كارد الاستبيان -->
+    <rect x="0" y="0" width="460" height="530" rx="24" fill="#ffffff" />
+    
+    <!-- شريط علوي داخل البطاقة -->
+    <rect x="0" y="0" width="460" height="70" rx="24" fill="url(#accentGradient)" />
+    <rect x="0" y="40" width="460" height="30" fill="url(#accentGradient)" />
+    
+    <!-- أيقونة في الشريط العلوي -->
+    <rect x="20" y="15" width="48" height="48" rx="14" fill="rgba(255,255,255,0.2)" />
+    <text x="44" y="45" font-family="'Segoe UI', sans-serif" font-size="24" fill="#ffffff" text-anchor="middle">📋</text>
+    <text x="85" y="45" font-family="'Tajawal', 'Cairo', sans-serif" font-size="20" fill="#ffffff" font-weight="bold">استبيان تقييم الخدمات</text>
+    
+    <!-- شريط التقدم -->
+    <rect x="25" y="100" width="410" height="6" rx="3" fill="#e8eaed" />
+    <rect x="25" y="100" width="260" height="6" rx="3" fill="url(#progressGradient)" />
+    <circle cx="285" cy="103" r="8" fill="#0d904f" filter="url(#glow)" />
+    <text x="435" y="96" font-family="'Segoe UI', sans-serif" font-size="12" fill="#5f6368" text-anchor="end">62%</text>
+    
+    <!-- نص السؤال -->
+    <text x="45" y="155" font-family="'Tajawal', 'Cairo', sans-serif" font-size="18" fill="#202124" font-weight="bold" text-anchor="start">ما مدى رضاك عن خدماتنا؟</text>
+    
+    <!-- خيارات متعددة بأسلوب الاستبيان -->
+    <rect x="45" y="175" width="370" height="44" rx="12" fill="#f8fafc" stroke="#dadce0" stroke-width="1.5" />
+    <circle cx="72" cy="197" r="10" fill="none" stroke="#dadce0" stroke-width="2" />
+    <text x="92" y="203" font-family="'Segoe UI', sans-serif" font-size="15" fill="#5f6368">راضٍ جداً 😍</text>
+    
+    <rect x="45" y="230" width="370" height="44" rx="12" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2" />
+    <circle cx="72" cy="252" r="10" fill="#ffffff" stroke="#1a73e8" stroke-width="4" />
+    <circle cx="72" cy="252" r="4" fill="#1a73e8" />
+    <text x="92" y="258" font-family="'Segoe UI', sans-serif" font-size="15" fill="#1a56c4" font-weight="bold">راضٍ 😊</text>
+    
+    <rect x="45" y="285" width="370" height="44" rx="12" fill="#f8fafc" stroke="#dadce0" stroke-width="1.5" />
+    <circle cx="72" cy="307" r="10" fill="none" stroke="#dadce0" stroke-width="2" />
+    <text x="92" y="313" font-family="'Segoe UI', sans-serif" font-size="15" fill="#5f6368">محايد 😐</text>
+    
+    <rect x="45" y="340" width="370" height="44" rx="12" fill="#f8fafc" stroke="#dadce0" stroke-width="1.5" />
+    <circle cx="72" cy="362" r="10" fill="none" stroke="#dadce0" stroke-width="2" />
+    <text x="92" y="368" font-family="'Segoe UI', sans-serif" font-size="15" fill="#5f6368">غير راضٍ 😕</text>
+    
+    <!-- نجوم التقييم -->
+    <text x="45" y="425" font-family="'Tajawal', 'Cairo', sans-serif" font-size="17" fill="#202124" font-weight="bold">قيّم سهولة الاستخدام</text>
+    <g transform="translate(45, 445)">
+      <polygon points="20,0 26,16 42,16 28,26 32,42 20,32 8,42 12,26 -2,16 14,16" fill="url(#starGradient)" />
+      <polygon points="60,0 66,16 82,16 68,26 72,42 60,32 48,42 52,26 38,16 54,16" fill="url(#starGradient)" />
+      <polygon points="100,0 106,16 122,16 108,26 112,42 100,32 88,42 92,26 78,16 94,16" fill="url(#starGradient)" />
+      <polygon points="140,0 146,16 162,16 148,26 152,42 140,32 128,42 132,26 118,16 134,16" fill="url(#starGradient)" />
+      <polygon points="180,0 186,16 202,16 188,26 192,42 180,32 168,42 172,26 158,16 174,16" fill="#e0e0e0" />
+    </g>
+  </g>
+  
+  <!-- ==================== القسم الأيمن: النصوص والتقنيات ==================== -->
+  <!-- المحاذاة: text-anchor="end" مع X=0 (أي النهاية عند الإحداثي 1180 مثلاً) -->
+  <g transform="translate(1120, 140)">
+    <!-- الأيقونة الرئيسية -->
+    <rect x="-70" y="0" width="70" height="70" rx="18" fill="url(#accentGradient)" filter="url(#glow)" />
+    <text x="-35" y="43" font-family="'Segoe UI', sans-serif" font-size="34" fill="#ffffff" text-anchor="middle">📋</text>
+    
+    <!-- العنوان الرئيسي والوصف -->
+    <text x="0" y="130" font-family="'Tajawal', 'Cairo', 'Segoe UI', sans-serif" font-size="46" fill="#202124" font-weight="bold" text-anchor="end">
+      نظام إستبيان فائق التطور
+    </text>
+    <text x="0" y="175" font-family="'Tajawal', 'Cairo', sans-serif" font-size="22" fill="#5f6368" text-anchor="end">
+      واجهة عربية متكاملة (RTL) | تحقق ديناميكي | حفظ تلقائي
+    </text>
+    
+    <!-- خط فاصل أنيق -->
+    <line x1="-480" y1="210" x2="0" y2="210" stroke="#dadce0" stroke-width="2" />
+    
+    <!-- وصف التقنيات المستخدمة -->
+    <text x="0" y="260" font-family="'Tajawal', 'Cairo', sans-serif" font-size="24" fill="#202124" font-weight="bold" text-anchor="end">
+      :مبني بإستخدام أحدث تقنيات الويب
+    </text>
+    
+    <!-- الصف الأول من الشارات -->
+    <g transform="translate(-130, 290)">
+      <rect x="0" y="0" width="130" height="46" rx="23" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2" />
+      <text x="65" y="30" font-family="'Segoe UI', sans-serif" font-size="16" fill="#1a73e8" font-weight="bold" text-anchor="middle">HTML5</text>
+    </g>
+    <g transform="translate(-280, 290)">
+      <rect x="0" y="0" width="130" height="46" rx="23" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2" />
+      <text x="65" y="30" font-family="'Segoe UI', sans-serif" font-size="16" fill="#1a73e8" font-weight="bold" text-anchor="middle">CSS3</text>
+    </g>
+    <g transform="translate(-430, 290)">
+      <rect x="0" y="0" width="140" height="46" rx="23" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2" />
+      <text x="70" y="30" font-family="'Segoe UI', sans-serif" font-size="16" fill="#1a73e8" font-weight="bold" text-anchor="middle">JavaScript</text>
+    </g>
+    
+    <!-- الصف الثاني من الشارات -->
+    <g transform="translate(-170, 355)">
+      <rect x="0" y="0" width="170" height="46" rx="23" fill="#e6f4ea" stroke="#0d904f" stroke-width="2" />
+      <text x="85" y="30" font-family="'Segoe UI', sans-serif" font-size="15" fill="#0d904f" font-weight="bold" text-anchor="middle">LocalStorage</text>
+    </g>
+    <g transform="translate(-300, 355)">
+      <rect x="0" y="0" width="110" height="46" rx="23" fill="#fce8e6" stroke="#d93025" stroke-width="2" />
+      <text x="55" y="30" font-family="'Segoe UI', sans-serif" font-size="16" fill="#d93025" font-weight="bold" text-anchor="middle">SVG</text>
+    </g>
+    <g transform="translate(-440, 355)">
+      <rect x="0" y="0" width="120" height="46" rx="23" fill="#fff8e1" stroke="#f9ab00" stroke-width="2" />
+      <text x="60" y="30" font-family="'Segoe UI', sans-serif" font-size="15" fill="#f9ab00" font-weight="bold" text-anchor="middle">RTL ✅</text>
+    </g>
+    
+    <!-- التذييل -->
+    <text x="0" y="470" font-family="'Tajawal', 'Cairo', sans-serif" font-size="20" fill="#202124" font-weight="bold" text-anchor="end">
+    </text>
+    <text x="0" y="500" font-family="'Tajawal', 'Cairo', sans-serif" font-size="16" fill="#5f6368" text-anchor="end">
+      نظام ذكي لجمع البيانات وتحليلها | 2024
+    </text>
+  </g>
+  
+  <!-- عناصر زخرفية للربط بين القسمين -->
+  <line x1="555" y1="90" x2="555" y2="560" stroke="#dadce0" stroke-width="2" stroke-dasharray="10,10" />
+</svg>

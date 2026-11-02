@@ -1,0 +1,275 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0d1a" />
+      <stop offset="50%" stop-color="#1a1030" />
+      <stop offset="100%" stop-color="#0d0d1a" />
+    </linearGradient>
+    
+    <!-- Gold glow gradient (Reduced intensity) -->
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(255,215,0,0.12)" />
+      <stop offset="60%" stop-color="rgba(255,215,0,0.03)" />
+      <stop offset="100%" stop-color="rgba(255,215,0,0)" />
+    </radialGradient>
+    
+    <!-- Purple glow -->
+    <radialGradient id="purpleGlow" cx="30%" cy="60%" r="55%">
+      <stop offset="0%" stop-color="rgba(108,43,217,0.25)" />
+      <stop offset="100%" stop-color="rgba(108,43,217,0)" />
+    </radialGradient>
+    
+    <!-- Banner gradient -->
+    <linearGradient id="bannerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6c2bd9" />
+      <stop offset="100%" stop-color="#9b59b6" />
+    </linearGradient>
+    
+    <!-- Title gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffd700" />
+      <stop offset="50%" stop-color="#ff8c42" />
+      <stop offset="100%" stop-color="#ffd700" />
+    </linearGradient>
+    
+    <!-- Wood gradient -->
+    <linearGradient id="woodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c49a6c" />
+      <stop offset="40%" stop-color="#b0794a" />
+      <stop offset="100%" stop-color="#8b5e3c" />
+    </linearGradient>
+    
+    <!-- Cushion gradient -->
+    <linearGradient id="cushionGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e63946" />
+      <stop offset="100%" stop-color="#b71c1c" />
+    </linearGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="3" dy="5" stdDeviation="6" flood-color="rgba(0,0,0,0.5)" />
+    </filter>
+    
+    <!-- Glow filter -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <!-- Neon glow -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur1" />
+      <feGaussianBlur stdDeviation="10" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <!-- Stripe pattern -->
+    <pattern id="stripes" patternUnits="userSpaceOnUse" width="40" height="40" patternTransform="rotate(15)">
+      <rect width="40" height="40" fill="rgba(255,255,255,0.02)" />
+      <line x1="0" y1="20" x2="40" y2="20" stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+  <rect width="1200" height="630" fill="url(#stripes)" />
+  
+  <!-- Glow orbs (Reduced size and intensity) -->
+  <ellipse cx="250" cy="180" rx="350" ry="250" fill="url(#purpleGlow)" />
+  <ellipse cx="950" cy="480" rx="350" ry="220" fill="url(#goldGlow)" />
+  
+  <!-- Floating particles (small stars/dots) -->
+  <circle cx="120" cy="80" r="3" fill="#feca57" opacity="0.5">
+    <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="1080" cy="120" r="2.5" fill="#ffd700" opacity="0.4">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="550" cy="45" r="2" fill="#00e5ff" opacity="0.5">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="950" cy="90" r="3.5" fill="#ff6b6b" opacity="0.45">
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="300" cy="550" r="2" fill="#feca57" opacity="0.3">
+    <animate attributeName="opacity" values="0.1;0.5;0.1" dur="5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="830" cy="30" r="2.5" fill="#ff8c42" opacity="0.4">
+    <animate attributeName="opacity" values="0.2;0.7;0.2" dur="2.8s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Decorative header bar -->
+  <rect x="0" y="0" width="1200" height="6" fill="url(#titleGrad)" opacity="0.8" />
+  
+  <!-- ==================== CHAIR CHARACTER ==================== -->
+  <g transform="translate(190, 220)" filter="url(#shadow)">
+    <!-- Chair body (backrest) -->
+    <rect x="0" y="0" width="50" height="140" rx="6" fill="url(#woodGrad)" stroke="#5c3d20" stroke-width="2.5" />
+    
+    <!-- Chair seat -->
+    <rect x="-30" y="120" width="130" height="35" rx="5" fill="url(#woodGrad)" stroke="#5c3d20" stroke-width="2.5" />
+    
+    <!-- Chair legs -->
+    <!-- Left back leg -->
+    <line x1="5" y1="140" x2="-10" y2="240" stroke="url(#woodGrad)" stroke-width="14" stroke-linecap="round" />
+    <!-- Right back leg -->
+    <line x1="45" y1="140" x2="55" y2="240" stroke="url(#woodGrad)" stroke-width="14" stroke-linecap="round" />
+    <!-- Left front leg (raised – holding sign) -->
+    <line x1="-20" y1="150" x2="-50" y2="110" stroke="url(#woodGrad)" stroke-width="13" stroke-linecap="round" />
+    <!-- Right front leg (standing) -->
+    <line x1="75" y1="150" x2="90" y2="240" stroke="url(#woodGrad)" stroke-width="14" stroke-linecap="round" />
+    
+    <!-- Chair crossbars -->
+    <line x1="5" y1="190" x2="80" y2="190" stroke="url(#woodGrad)" stroke-width="8" stroke-linecap="round" />
+    <line x1="-5" y1="200" x2="80" y2="200" stroke="url(#woodGrad)" stroke-width="7" stroke-linecap="round" />
+    
+    <!-- Cushion on backrest (like a cape) -->
+    <g transform="translate(10, -30)">
+      <!-- Cape shape -->
+      <path d="M-15,0 Q-20,30 -25,80 Q-10,90 0,100 Q15,85 25,75 Q25,30 20,0 Z" fill="url(#cushionGrad)" stroke="#8b0000" stroke-width="2" opacity="0.9" />
+      <!-- Cape knot -->
+      <circle cx="2" cy="5" r="8" fill="#ffd700" stroke="#b8860b" stroke-width="2" />
+      <rect x="-4" y="8" width="12" height="14" rx="3" fill="#e63946" stroke="#8b0000" stroke-width="1.5" />
+    </g>
+    
+    <!-- Eyes (angry/protest face) -->
+    <g transform="translate(15, 40)">
+      <!-- Left eye -->
+      <ellipse cx="5" cy="0" rx="10" ry="9" fill="white" stroke="#333" stroke-width="2" />
+      <circle cx="7" cy="-1" r="5" fill="#333" />
+      <circle cx="8" cy="-2.5" r="2" fill="white" />
+      <!-- Left eyebrow -->
+      <line x1="-5" y1="-10" x2="14" y2="-6" stroke="#333" stroke-width="4" stroke-linecap="round" />
+    </g>
+    <g transform="translate(35, 40)">
+      <!-- Right eye -->
+      <ellipse cx="5" cy="0" rx="10" ry="9" fill="white" stroke="#333" stroke-width="2" />
+      <circle cx="7" cy="-1" r="5" fill="#333" />
+      <circle cx="8" cy="-2.5" r="2" fill="white" />
+      <!-- Right eyebrow -->
+      <line x1="-4" y1="-6" x2="15" y2="-10" stroke="#333" stroke-width="4" stroke-linecap="round" />
+    </g>
+    
+    <!-- Mouth (shouting) -->
+    <ellipse cx="25" cy="65" rx="12" ry="8" fill="#333" />
+    <ellipse cx="25" cy="63" rx="8" ry="4" fill="#e63946" />
+    
+    <!-- Speech bubble -->
+    <g transform="translate(65, -30)">
+      <rect x="0" y="0" width="100" height="50" rx="15" fill="white" stroke="#333" stroke-width="2.5" filter="url(#glow)" />
+      <polygon points="15,48 25,65 40,48" fill="white" stroke="#333" stroke-width="2.5" />
+      <text x="50" y="22" text-anchor="middle" font-family="'Georgia', serif" font-weight="900" font-size="13" fill="#e63946">STRIKE!</text>
+      <text x="50" y="40" text-anchor="middle" font-family="'Georgia', serif" font-weight="700" font-size="10" fill="#333">NO MORE!</text>
+    </g>
+  </g>
+  
+  <!-- ==================== PICKET SIGN (held by chair) ==================== -->
+  <g transform="translate(60, 120)" filter="url(#shadow)">
+    <!-- Stick (pencil) -->
+    <rect x="-6" y="-80" width="12" height="140" rx="3" fill="#f4a261" stroke="#d67b2a" stroke-width="2" />
+    <polygon points="-6,-80 6,-80 0,-95" fill="#f7d794" stroke="#d67b2a" stroke-width="2" />
+    <rect x="-3" y="-85" width="6" height="10" fill="#333" />
+    <!-- Sign board -->
+    <rect x="-75" y="-205" width="150" height="130" rx="8" fill="#fffbeb" stroke="#333" stroke-width="3" />
+    <rect x="-75" y="-205" width="150" height="130" rx="8" fill="rgba(255,200,50,0.15)" />
+    <!-- Sign text -->
+    <text x="0" y="-160" text-anchor="middle" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="22" fill="#e63946" transform="rotate(-3, 0, -160)">WE REFUSE</text>
+    <text x="0" y="-130" text-anchor="middle" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="22" fill="#e63946" transform="rotate(-2, 0, -130)">TO BE SAT</text>
+    <text x="0" y="-100" text-anchor="middle" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="26" fill="#333" transform="rotate(1, 0, -100)">ON!</text>
+    <!-- Tape -->
+    <rect x="-18" y="-210" width="36" height="18" rx="3" fill="#feca57" opacity="0.7" stroke="#d4a017" stroke-width="1" />
+  </g>
+  
+  <!-- ==================== TITLE AREA ==================== -->
+  <g transform="translate(600, 140)">
+    <!-- Main title background bar -->
+    <rect x="-380" y="-45" width="760" height="80" rx="40" fill="rgba(0,0,0,0.5)" stroke="url(#titleGrad)" stroke-width="3" filter="url(#neonGlow)" />
+    
+    <!-- Title text -->
+    <text x="0" y="8" text-anchor="middle" font-family="'Georgia', 'Times New Roman', serif" font-weight="900" font-size="42" fill="url(#titleGrad)" filter="url(#glow)">🪑 The Day the Chairs</text>
+  </g>
+  <g transform="translate(600, 210)">
+    <text x="0" y="0" text-anchor="middle" font-family="'Georgia', 'Times New Roman', serif" font-weight="900" font-size="42" fill="url(#titleGrad)" filter="url(#glow)">Went on Strike 🪑</text>
+  </g>
+  
+  <!-- Subtitle -->
+  <g transform="translate(600, 265)">
+    <rect x="-260" y="-18" width="520" height="36" rx="18" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" />
+    <text x="0" y="6" text-anchor="middle" font-family="'Segoe UI', 'Poppins', sans-serif" font-weight="600" font-size="16" fill="#aaa" letter-spacing="2">ULTRA-INTERACTIVE ENGLISH READING</text>
+  </g>
+  
+  <!-- Badge: Interactive Games -->
+  <g transform="translate(600, 320)">
+    <rect x="-180" y="-22" width="360" height="44" rx="22" fill="rgba(42,157,143,0.2)" stroke="#2a9d8f" stroke-width="2" />
+    <text x="0" y="6" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="14" fill="#2a9d8f" letter-spacing="1.5">🎮 QUIZ • CROSSWORD • SCRAMBLE • MEMORY 🧠</text>
+  </g>
+  
+  <!-- ==================== FEATURE ICONS ROW ==================== -->
+  <g transform="translate(750, 420)">
+    <!-- Audio icon -->
+    <circle cx="0" cy="0" r="28" fill="rgba(0,229,255,0.15)" stroke="#00e5ff" stroke-width="2" />
+    <text x="0" y="6" text-anchor="middle" font-size="22">🎧</text>
+    <text x="0" y="45" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="10" fill="#aaa">Audio</text>
+    
+    <!-- Interactive icon -->
+    <circle cx="90" cy="0" r="28" fill="rgba(254,202,87,0.15)" stroke="#feca57" stroke-width="2" />
+    <text x="90" y="6" text-anchor="middle" font-size="22">🎯</text>
+    <text x="90" y="45" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="10" fill="#aaa">Interactive</text>
+    
+    <!-- Vocabulary icon -->
+    <circle cx="180" cy="0" r="28" fill="rgba(255,107,107,0.15)" stroke="#ff6b6b" stroke-width="2" />
+    <text x="180" y="6" text-anchor="middle" font-size="22">📝</text>
+    <text x="180" y="45" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="10" fill="#aaa">Vocabulary</text>
+    
+    <!-- Games icon -->
+    <circle cx="270" cy="0" r="28" fill="rgba(108,43,217,0.2)" stroke="#9b59b6" stroke-width="2" />
+    <text x="270" y="6" text-anchor="middle" font-size="22">🕹️</text>
+    <text x="270" y="45" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="10" fill="#aaa">Games</text>
+  </g>
+  
+  <!-- ==================== DESIGNER CREDIT ==================== -->
+  <g transform="translate(600, 555)">
+    <rect x="-220" y="-22" width="440" height="44" rx="22" fill="rgba(0,0,0,0.6)" stroke="rgba(255,215,0,0.4)" stroke-width="2" />
+    <text x="0" y="0" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-weight="900" font-size="18" fill="#ffd700" letter-spacing="3">✨ AMR AL-MUKARDI ✨</text>
+    <text x="0" y="16" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#ffcc00" direction="rtl">عمرو المكردي — Lesson Designer &amp; Creator</text>
+  </g>
+  
+  <!-- Decorative bottom line -->
+  <rect x="200" y="590" width="800" height="3" rx="2" fill="url(#titleGrad)" opacity="0.6" />
+  
+  <!-- ==================== Small desk silhouette on right ==================== -->
+  <g transform="translate(960, 360)" opacity="0.15">
+    <rect x="0" y="40" width="180" height="12" rx="4" fill="#aaa" />
+    <rect x="15" y="52" width="10" height="50" rx="2" fill="#888" />
+    <rect x="155" y="52" width="10" height="50" rx="2" fill="#888" />
+    <!-- Tiny chair on desk -->
+    <rect x="60" y="10" width="40" height="30" rx="3" fill="#999" />
+    <rect x="75" y="40" width="10" height="20" rx="2" fill="#777" />
+  </g>
+  
+  <!-- Tiny protest chair silhouettes (background) -->
+  <g transform="translate(1050, 360)" opacity="0.12">
+    <rect x="0" y="30" width="30" height="25" rx="3" fill="#fff" />
+    <line x1="5" y1="55" x2="5" y2="75" stroke="#fff" stroke-width="5" stroke-linecap="round" />
+    <line x1="25" y1="55" x2="28" y2="60" stroke="#fff" stroke-width="5" stroke-linecap="round" />
+    <rect x="-15" y="15" width="50" height="20" rx="4" fill="rgba(255,255,255,0.3)" />
+    <text x="10" y="29" text-anchor="middle" font-size="6" fill="#ff6b6b" font-weight="bold">STRIKE</text>
+  </g>
+  
+  <!-- Border frame -->
+  <rect x="0" y="0" width="1200" height="630" rx="16" fill="none" stroke="url(#titleGrad)" stroke-width="3" opacity="0.5" />
+  
+  <!-- Corner accents -->
+  <path d="M8,16 Q8,8 16,8" fill="none" stroke="#ffd700" stroke-width="4" stroke-linecap="round" opacity="0.7" />
+  <path d="M1192,16 Q1192,8 1184,8" fill="none" stroke="#ffd700" stroke-width="4" stroke-linecap="round" opacity="0.7" />
+  <path d="M8,614 Q8,622 16,622" fill="none" stroke="#ffd700" stroke-width="4" stroke-linecap="round" opacity="0.7" />
+  <path d="M1192,614 Q1192,622 1184,622" fill="none" stroke="#ffd700" stroke-width="4" stroke-linecap="round" opacity="0.7" />
+</svg>

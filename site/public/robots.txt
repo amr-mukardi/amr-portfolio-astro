@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://amr-portfolio-astro.vercel.app/sitemap-index.xml

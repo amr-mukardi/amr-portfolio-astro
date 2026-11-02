@@ -1,0 +1,100 @@
+---
+// Removed Button import to create a custom non-animated button
+import { t } from '../../utils/i18n';
+import { Image } from 'astro:assets';
+import profileImg from '../../assets/profile.png';
+import { getTranslations } from '../../utils/i18n';
+import resumeUrl from '../../assets/resume.pdf';
+
+const lang = Astro.currentLocale;
+const roles: string[] = (getTranslations(lang) as any).hero.roles;
+---
+
+<section id="start" class="relative pt-28 pb-16 md:pt-36 md:pb-24">
+  <div class="max-w-container mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-gutter">
+    <div class="md:col-span-7 flex flex-col justify-center">
+      <span class="font-mono text-primary text-sm mb-4">{t('hero.greeting', lang)}</span>
+      <h1 class="font-heading text-h1 text-secondary dark:text-white mb-4">
+        {t('hero.name', lang)}
+      </h1>
+      <p class="text-lg md:text-xl text-secondary/80 dark:text-white/80 mb-6 max-w-2xl">
+        {t('hero.pitch', lang)}
+      </p>
+      <p class="text-primary font-medium text-xl md:text-2xl mb-8 min-h-[2.25rem]" aria-label={roles.join(lang === 'en' ? ', ' : '، ')}>
+        <span id="typed-role" data-roles={JSON.stringify(roles)} aria-hidden="true">{roles[0]}</span>
+      </p>
+
+      <div class="flex flex-wrap gap-4 mt-8">
+        <a
+          href={resumeUrl}
+          download="Amr-AL-Mukardi-Resume.pdf"
+          class="inline-flex items-center justify-center gap-2 rounded-lg font-medium text-base py-2 px-6 bg-primary text-white hover:bg-primary/90 transition-colors duration-200"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 15V3"></path>
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <path d="m7 10 5 5 5-5"></path>
+          </svg>
+          {t('hero.ctaResume', lang)}
+        </a>
+        <a
+          href="#about"
+          class="inline-flex items-center justify-center rounded-lg font-medium text-base py-2 px-6 border border-primary text-primary hover:bg-primary/10 bg-transparent"
+        >
+          {t('hero.ctaAbout', lang)}
+        </a>
+      </div>
+    </div>
+
+    <div class="md:col-span-5 mt-12 md:mt-0">
+      <div class="relative">
+        <!-- Decorative background element -->
+        <div class="absolute -top-6 -end-6 w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-primary/10 to-orange-400/10 rounded-3xl -z-10"></div>
+
+        <!-- Profile image -->
+        <Image
+          src={profileImg}
+          alt={t('hero.imageAlt', lang)}
+          class="w-full max-w-md mx-auto rounded-2xl shadow-lg"
+          width="500"
+          height="600"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Down Indicator -->
+  <div id="scroll-indicator" class="absolute bottom-6 inset-x-0 flex justify-center pointer-events-none">
+    <a href="#about" aria-label={t('hero.ctaAbout', lang)} class="pointer-events-auto animate-bounce">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary dark:text-highlightBlue" aria-hidden="true">
+        <path d="M12 5v14"></path>
+        <path d="m19 12-7 7-7-7"></path>
+      </svg>
+    </a>
+  </div>
+</section>
+
+
+<script>
+  const el = document.getElementById('typed-role');
+  if (el) {
+    const roles: string[] = JSON.parse(el.dataset.roles || '[]');
+    if (roles.length > 1) {
+      const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+      (async () => {
+        let i = 0;
+        while (true) {
+          const chars = Array.from(roles[i % roles.length]);
+          for (let n = 1; n <= chars.length; n++) { el.textContent = chars.slice(0, n).join(''); await sleep(110); }
+          await sleep(1800);
+          for (let n = chars.length - 1; n >= 0; n--) { el.textContent = chars.slice(0, n).join(''); await sleep(45); }
+          await sleep(400);
+          i++;
+        }
+      })();
+    }
+  }
+</script>
+

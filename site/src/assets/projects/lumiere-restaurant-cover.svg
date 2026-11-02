@@ -1,0 +1,293 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- BACKGROUND GRADIENTS -->
+    <radialGradient id="meshGlow1" cx="20%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#C89B3C" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#C89B3C" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="meshGlow2" cx="80%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#F4E7C5" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#F4E7C5" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="meshGlow3" cx="10%" cy="80%" r="40%">
+      <stop offset="0%" stop-color="#E63946" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#E63946" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- TEXT AND ACCENT GRADIENTS -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4E7C5" />
+      <stop offset="40%" stop-color="#C89B3C" />
+      <stop offset="100%" stop-color="#8A6D2B" />
+    </linearGradient>
+    <linearGradient id="creamGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F8F8F8" />
+      <stop offset="100%" stop-color="#F4E7C5" />
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.15" />
+    </linearGradient>
+    <linearGradient id="archGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C89B3C" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#C89B3C" stop-opacity="0.05" />
+    </linearGradient>
+    
+    <!-- FILTERS -->
+    <filter id="noiseFilter" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="4" stitchTiles="stitch" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 0.04 0" />
+    </filter>
+    <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="softBlurLarge">
+      <feGaussianBlur stdDeviation="40" />
+    </filter>
+    <filter id="softBlurMedium">
+      <feGaussianBlur stdDeviation="15" />
+    </filter>
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+    
+    <!-- BADGE STYLES -->
+    <linearGradient id="badgeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.02" />
+    </linearGradient>
+  </defs>
+  
+  <!-- BACKGROUND LAYER -->
+  <rect width="1200" height="630" fill="#080808" />
+  
+  <!-- MESH GRADIENTS LAYER -->
+  <rect width="1200" height="630" fill="url(#meshGlow1)" />
+  <rect width="1200" height="630" fill="url(#meshGlow2)" />
+  <rect width="1200" height="630" fill="url(#meshGlow3)" />
+  
+  <!-- NOISE TEXTURE OVERLAY -->
+  <rect width="1200" height="630" filter="url(#noiseFilter)" opacity="0.8" />
+  
+  <!-- VIGNETTE EFFECT -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+    <stop offset="60%" stop-color="#000000" stop-opacity="0" />
+    <stop offset="100%" stop-color="#000000" stop-opacity="0.6" />
+  </radialGradient>
+  <rect width="1200" height="630" fill="url(#vignette)" />
+  
+  <!-- ELEGANT GEOMETRIC LINES (Background Details) -->
+  <line x1="80" y1="180" x2="280" y2="180" stroke="url(#goldGradient)" stroke-width="1" opacity="0.5" />
+  <line x1="550" y1="0" x2="550" y2="630" stroke="#FFFFFF" stroke-opacity="0.03" stroke-width="1" />
+  
+  <!-- RIGHT SIDE: ARCHITECTURAL BACKDROP -->
+  <path d="M 500,630 L 500,120 C 500,20 1200,20 1200,630 Z" fill="url(#archGrad)" />
+  <path d="M 500,630 L 500,120 C 500,20 1200,20 1200,630 Z" fill="none" stroke="url(#goldGradient)" stroke-width="1.5" opacity="0.4" />
+  
+  <!-- DECORATIVE BORDER -->
+  <rect x="20" y="20" width="1160" height="590" fill="none" stroke="url(#goldGradient)" stroke-width="1" opacity="0.3" rx="16" />
+  
+  <!-- ==================== ILLUSTRATIONS (RIGHT SIDE) ==================== -->
+  <g id="luxury-illustration" filter="url(#dropShadow)">
+    
+    <!-- SUBTLE GOLDEN LINES / ARCHES -->
+    <path d="M 650,500 A 250 250 0 0 1 1100,500" fill="none" stroke="#C89B3C" stroke-width="1" opacity="0.2" />
+    <path d="M 700,520 A 200 200 0 0 1 1050,520" fill="none" stroke="#F4E7C5" stroke-width="1" opacity="0.2" />
+    
+    <!-- ELEGANT PLATE -->
+    <g id="plate">
+      <!-- Plate Shadow -->
+      <ellipse cx="880" cy="505" rx="175" ry="45" fill="#000000" opacity="0.5" />
+      <!-- Plate Outer Rim -->
+      <ellipse cx="880" cy="500" rx="170" ry="42" fill="#0F1115" stroke="url(#goldGradient)" stroke-width="2" />
+      <!-- Plate Inner Rim -->
+      <ellipse cx="880" cy="500" rx="140" ry="34" fill="none" stroke="#F4E7C5" stroke-width="1" opacity="0.6" />
+      <!-- Plate Center -->
+      <ellipse cx="880" cy="500" rx="100" ry="24" fill="rgba(200, 155, 60, 0.05)" />
+      <!-- Plate Highlight -->
+      <path d="M 740,490 A 140 34 0 0 1 880,466" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.3" />
+    </g>
+    
+    <!-- CROSSED CUTLERY -->
+    <g id="cutlery">
+      <!-- Fork -->
+      <g transform="translate(720, 420) rotate(-25)">
+        <!-- Handle -->
+        <rect x="-4" y="-30" width="8" height="130" fill="url(#goldGradient)" rx="4" />
+        <rect x="-2" y="-20" width="4" height="100" fill="#0F1115" rx="2" />
+        <!-- Bolster -->
+        <rect x="-6" y="-32" width="12" height="6" rx="2" fill="#C89B3C" />
+        <!-- Neck & Tines -->
+        <path d="M -6,-30 L -6,-60 M -2,-30 L -2,-60 M 2,-30 L 2,-60 M 6,-30 L 6,-60" stroke="url(#goldGradient)" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M -8,-60 Q 0,-70 8,-60" fill="none" stroke="url(#goldGradient)" stroke-width="2" />
+        <circle cx="0" cy="5" r="6" fill="#C89B3C" />
+      </g>
+      
+      <!-- Knife -->
+      <g transform="translate(1040, 420) rotate(25)">
+        <!-- Handle -->
+        <rect x="-4" y="-30" width="8" height="130" fill="url(#goldGradient)" rx="4" />
+        <rect x="-2" y="-20" width="4" height="100" fill="#0F1115" rx="2" />
+        <!-- Bolster -->
+        <rect x="-6" y="-32" width="12" height="6" rx="2" fill="#C89B3C" />
+        <!-- Blade -->
+        <path d="M -6,-32 L -6,-80 Q -6,-100 6,-100 L 6,-32 Z" fill="url(#creamGradient)" />
+        <path d="M -6,-80 L 6,-100" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.6" />
+        <circle cx="0" cy="5" r="6" fill="#C89B3C" />
+      </g>
+    </g>
+    
+    <!-- GLASS CLOCHE (DOME) -->
+    <g id="cloche">
+      <!-- Dome Glass -->
+      <path d="M 790,500 C 790,340 970,340 970,500 Z" fill="url(#glassGrad)" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="1.5" />
+      <!-- Dome Base -->
+      <rect x="780" y="500" width="200" height="8" rx="4" fill="url(#goldGradient)" />
+      <rect x="780" y="508" width="200" height="4" fill="#0F1115" opacity="0.8" />
+      <!-- Dome Knob -->
+      <circle cx="880" cy="340" r="10" fill="url(#goldGradient)" />
+      <circle cx="880" cy="340" r="4" fill="#F4E7C5" />
+      <!-- Dome Reflection -->
+      <path d="M 820,490 C 820,380 900,380 900,490" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="4" stroke-linecap="round" />
+    </g>
+    
+    <!-- FLOATING STEAM / AROMA LINES -->
+    <g id="steam" filter="url(#softBlurMedium)" opacity="0.6">
+      <path d="M 830,360 Q 820,300 840,240" fill="none" stroke="#F4E7C5" stroke-width="2.5" stroke-linecap="round" />
+      <path d="M 880,350 Q 870,280 890,220" fill="none" stroke="#F4E7C5" stroke-width="1.5" stroke-linecap="round" opacity="0.7" />
+      <path d="M 930,360 Q 940,310 920,260" fill="none" stroke="#F4E7C5" stroke-width="2" stroke-linecap="round" />
+    </g>
+    
+    <!-- CHEF HAT (Minimalist, Top-Left of Cloche) -->
+    <g id="chef-hat" transform="translate(730, 150)">
+      <!-- Hat Base -->
+      <rect x="10" y="20" width="40" height="20" fill="#F4E7C5" rx="4" />
+      <rect x="10" y="35" width="40" height="5" fill="#FFFFFF" />
+      <!-- Hat Puff -->
+      <circle cx="15" cy="15" r="22" fill="#FFFFFF" />
+      <circle cx="45" cy="15" r="22" fill="#FFFFFF" />
+      <circle cx="30" cy="5" r="24" fill="#F8F8F8" />
+      <!-- Hat Details -->
+      <path d="M 15,15 Q 30,-5 45,15" fill="none" stroke="#E63946" stroke-width="1.5" opacity="0.6" />
+      <circle cx="30" cy="5" r="3" fill="#C89B3C" />
+    </g>
+    
+    <!-- WINE GLASS (Minimalist, Top-Right of Cloche) -->
+    <g id="wine-glass" transform="translate(1000, 160)">
+      <!-- Glass Bowl -->
+      <path d="M 990,50 C 980,40 970,60 980,80 C 990,80 1000,80 1010,80 C 1020,60 1010,40 1000,50 Z" fill="url(#glassGrad)" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.5" />
+      <!-- Wine Filling -->
+      <path d="M 980,80 C 980,70 985,60 995,65 C 1005,60 1010,70 1010,80 Z" fill="#E63946" opacity="0.8" />
+      <!-- Stem -->
+      <line x1="995" y1="80" x2="995" y2="110" stroke="#F4E7C5" stroke-width="2" />
+      <!-- Base -->
+      <ellipse cx="995" cy="115" rx="20" ry="6" fill="none" stroke="url(#goldGradient)" stroke-width="2" />
+      <ellipse cx="995" cy="115" rx="18" ry="4" fill="rgba(200, 155, 60, 0.3)" />
+      <!-- Highlight -->
+      <path d="M 985,55 Q 980,65 985,75" fill="none" stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="2" stroke-linecap="round" />
+    </g>
+    
+    <!-- GOLDEN SPARKLES / DUST -->
+    <g id="sparkles" fill="#C89B3C">
+      <!-- Diamond shaped sparkles -->
+      <path d="M 680,280 L 685,290 L 695,295 L 685,300 L 680,310 L 675,300 L 665,295 L 675,290 Z" opacity="0.8" filter="url(#glowFilter)" />
+      <path d="M 1080,220 L 1083,226 L 1089,229 L 1083,232 L 1080,238 L 1077,232 L 1071,229 L 1077,226 Z" opacity="0.6" filter="url(#glowFilter)" />
+      <path d="M 750,120 L 752,124 L 756,126 L 752,128 L 750,132 L 748,128 L 744,126 L 748,124 Z" opacity="0.9" />
+      <path d="M 1050,130 L 1052,134 L 1056,136 L 1052,138 L 1050,142 L 1048,138 L 1044,136 L 1048,134 Z" opacity="0.5" />
+      <path d="M 620,400 L 622,404 L 626,406 L 622,408 L 620,412 L 618,408 L 614,406 L 618,404 Z" opacity="0.7" />
+      <path d="M 1120,380 L 1122,384 L 1126,386 L 1122,388 L 1120,392 L 1118,388 L 1114,386 L 1118,384 Z" opacity="0.4" />
+      
+      <!-- Floating orbs -->
+      <circle cx="700" cy="200" r="3" opacity="0.6" filter="url(#glowFilter)" />
+      <circle cx="850" cy="150" r="2" opacity="0.8" />
+      <circle cx="960" cy="100" r="4" opacity="0.4" filter="url(#glowFilter)" />
+      <circle cx="1100" cy="300" r="2.5" opacity="0.7" />
+      <circle cx="640" cy="350" r="1.5" opacity="0.9" />
+      <circle cx="980" cy="380" r="3" opacity="0.5" filter="url(#glowFilter)" />
+    </g>
+  </g>
+  
+  <!-- ==================== TYPOGRAPHY & CONTENT (LEFT SIDE) ==================== -->
+  
+  <!-- Title Block -->
+  <text x="80" y="170" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="bold" fill="url(#goldGradient)" letter-spacing="2">
+    Lumière
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="82" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#F4E7C5" letter-spacing="10" text-transform="uppercase">
+    LUXURY BILINGUAL RESTAURANT
+  </text>
+  
+  <!-- Decorative Line -->
+  <line x1="80" y1="245" x2="350" y2="245" stroke="url(#goldGradient)" stroke-width="2" opacity="0.8" />
+  
+  <!-- Description -->
+  <text x="80" y="295" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#F8F8F8" opacity="0.85">
+    A premium fine dining digital experience
+  </text>
+  <text x="80" y="325" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#F8F8F8" opacity="0.85">
+    with elegant animations, full RTL support,
+  </text>
+  <text x="80" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#F8F8F8" opacity="0.85">
+    and a refined cinematic aesthetic.
+  </text>
+  
+  <!-- Technology Badges -->
+  <g id="tech-badges" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#F4E7C5" text-anchor="middle">
+    
+    <!-- Row 1 -->
+    <!-- HTML5 -->
+    <g transform="translate(80, 400)">
+      <rect width="110" height="32" rx="16" fill="url(#badgeBg)" stroke="url(#goldGradient)" stroke-width="1" />
+      <text x="55" y="21">HTML5</text>
+    </g>
+    <!-- CSS3 -->
+    <g transform="translate(200, 400)">
+      <rect width="110" height="32" rx="16" fill="url(#badgeBg)" stroke="url(#goldGradient)" stroke-width="1" />
+      <text x="55" y="21">CSS3</text>
+    </g>
+    <!-- JavaScript -->
+    <g transform="translate(320, 400)">
+      <rect width="110" height="32" rx="16" fill="url(#badgeBg)" stroke="url(#goldGradient)" stroke-width="1" />
+      <text x="55" y="21">JavaScript</text>
+    </g>
+    <!-- Responsive -->
+    <g transform="translate(440, 400)">
+      <rect width="110" height="32" rx="16" fill="url(#badgeBg)" stroke="url(#goldGradient)" stroke-width="1" />
+      <text x="55" y="21">Responsive</text>
+    </g>
+    
+    <!-- Row 2 -->
+    <!-- SEO -->
+    <g transform="translate(80, 450)">
+      <rect width="110" height="32" rx="16" fill="url(#badgeBg)" stroke="url(#goldGradient)" stroke-width="1" />
+      <text x="55" y="21">SEO</text>
+    </g>
+    <!-- Accessibility -->
+    <g transform="translate(200, 450)">
+      <rect width="110" height="32" rx="16" fill="url(#badgeBg)" stroke="url(#goldGradient)" stroke-width="1" />
+      <text x="55" y="21">Accessibility</text>
+    </g>
+    <!-- Bilingual -->
+    <g transform="translate(320, 450)">
+      <rect width="110" height="32" rx="16" fill="url(#badgeBg)" stroke="url(#goldGradient)" stroke-width="1" />
+      <text x="55" y="21">Bilingual</text>
+    </g>
+    <!-- SVG -->
+    <g transform="translate(440, 450)">
+      <rect width="110" height="32" rx="16" fill="url(#badgeBg)" stroke="url(#goldGradient)" stroke-width="1" />
+      <text x="55" y="21">SVG</text>
+    </g>
+  </g>
+  
+  <!-- Footer / Repo Line -->
+  <text x="80" y="590" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.4">
+    Premium HTML · CSS · JavaScript Experience
+  </text>
+  
+  <!-- Decorative Element Bottom Right Corner -->
+  <path d="M 1150,600 L 1180,600 L 1180,570" fill="none" stroke="url(#goldGradient)" stroke-width="2" opacity="0.6" />
+</svg>
